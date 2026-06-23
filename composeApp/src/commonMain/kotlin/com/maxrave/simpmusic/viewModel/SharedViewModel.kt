@@ -1658,7 +1658,7 @@ class SharedViewModel(
                 mediaPlayerHandler.playNext(listTrack.first())
                 makeToast(getString(Res.string.play_next))
             } else {
-                mediaPlayerHandler.loadMoreCatalog(listTrack)
+                mediaPlayerHandler.loadMoreCatalog(listTrack, isAddToQueue = true)
                 makeToast(getString(Res.string.added_to_queue))
             }
         }
