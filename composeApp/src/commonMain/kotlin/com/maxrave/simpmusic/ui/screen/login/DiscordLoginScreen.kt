@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.screen.login
+package com.maxrave.windmusic.ui.screen.login
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -27,20 +27,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.maxrave.simpmusic.expect.ui.DiscordWebView
-import com.maxrave.simpmusic.expect.ui.rememberWebViewState
-import com.maxrave.simpmusic.extension.getStringBlocking
-import com.maxrave.simpmusic.ui.component.DevLogInBottomSheet
-import com.maxrave.simpmusic.ui.component.DevLogInType
-import com.maxrave.simpmusic.ui.component.RippleIconButton
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.viewModel.LogInViewModel
+import com.maxrave.windmusic.expect.ui.DiscordWebView
+import com.maxrave.windmusic.expect.ui.rememberWebViewState
+import com.maxrave.windmusic.extension.getStringBlocking
+import com.maxrave.windmusic.ui.component.DevLogInBottomSheet
+import com.maxrave.windmusic.ui.component.DevLogInType
+import com.maxrave.windmusic.ui.component.RippleIconButton
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.viewModel.LogInViewModel
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
-import simpmusic.composeapp.generated.resources.log_in_to_discord
-import simpmusic.composeapp.generated.resources.login_success
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
+import windmusic.composeapp.generated.resources.log_in_to_discord
+import windmusic.composeapp.generated.resources.login_success
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

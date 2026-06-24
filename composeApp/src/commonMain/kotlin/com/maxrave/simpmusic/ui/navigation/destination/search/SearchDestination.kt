@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.navigation.destination.search
+package com.maxrave.windmusic.ui.navigation.destination.search
 
 import kotlinx.serialization.Serializable
 

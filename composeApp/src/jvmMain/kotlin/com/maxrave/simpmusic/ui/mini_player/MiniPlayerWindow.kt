@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.mini_player
+package com.maxrave.windmusic.ui.mini_player
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -18,11 +18,11 @@ import androidx.compose.ui.window.WindowPlacement
 import androidx.compose.ui.window.WindowPosition
 import androidx.compose.ui.window.WindowState
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.viewModel.SharedViewModel
-import com.maxrave.simpmusic.viewModel.UIEvent
+import com.maxrave.windmusic.viewModel.SharedViewModel
+import com.maxrave.windmusic.viewModel.UIEvent
 import org.jetbrains.compose.resources.painterResource
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.circle_app_icon
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.circle_app_icon
 import java.awt.Dimension
 import java.util.prefs.Preferences
 
@@ -44,7 +44,7 @@ fun MiniPlayerWindow(
     sharedViewModel: SharedViewModel,
     onCloseRequest: () -> Unit,
 ) {
-    val prefs = remember { Preferences.userRoot().node("SimpMusic/MiniPlayer") }
+    val prefs = remember { Preferences.userRoot().node("WindMusic/MiniPlayer") }
 
     // Minimum size constraints
     val minWidth = 200f
@@ -85,7 +85,7 @@ fun MiniPlayerWindow(
 
     Window(
         onCloseRequest = onCloseRequest,
-        title = "SimpMusic - Mini Player",
+        title = "WindMusic - Mini Player",
         icon = painterResource(Res.drawable.circle_app_icon),
         alwaysOnTop = true,
         undecorated = true,

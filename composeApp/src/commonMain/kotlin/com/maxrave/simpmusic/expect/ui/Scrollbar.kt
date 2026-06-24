@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.expect.ui
+package com.maxrave.windmusic.expect.ui
 
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.runtime.Composable

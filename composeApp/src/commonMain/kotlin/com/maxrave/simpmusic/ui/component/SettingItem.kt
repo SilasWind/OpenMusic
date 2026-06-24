@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -17,9 +17,9 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.maxrave.simpmusic.extension.greyScale
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.ui.theme.white
+import com.maxrave.windmusic.extension.greyScale
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.ui.theme.white
 
 @Composable
 fun SettingItem(

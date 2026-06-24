@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.viewModel
+package com.maxrave.windmusic.viewModel
 
 import androidx.lifecycle.viewModelScope
 import coil3.PlatformContext
@@ -21,9 +21,9 @@ import com.maxrave.domain.repository.SongRepository
 import com.maxrave.domain.utils.LocalResource
 import com.maxrave.logger.LogLevel
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.Platform
-import com.maxrave.simpmusic.getPlatform
-import com.maxrave.simpmusic.viewModel.base.BaseViewModel
+import com.maxrave.windmusic.Platform
+import com.maxrave.windmusic.getPlatform
+import com.maxrave.windmusic.viewModel.base.BaseViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 import kotlinx.coroutines.delay
@@ -39,16 +39,16 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import org.koin.core.component.inject
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.backup_create_failed
-import simpmusic.composeapp.generated.resources.backup_create_success
-import simpmusic.composeapp.generated.resources.backup_in_progress
-import simpmusic.composeapp.generated.resources.clear_canvas_cache
-import simpmusic.composeapp.generated.resources.clear_downloaded_cache
-import simpmusic.composeapp.generated.resources.clear_player_cache
-import simpmusic.composeapp.generated.resources.clear_thumbnail_cache
-import simpmusic.composeapp.generated.resources.restore_failed
-import simpmusic.composeapp.generated.resources.restore_in_progress
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.backup_create_failed
+import windmusic.composeapp.generated.resources.backup_create_success
+import windmusic.composeapp.generated.resources.backup_in_progress
+import windmusic.composeapp.generated.resources.clear_canvas_cache
+import windmusic.composeapp.generated.resources.clear_downloaded_cache
+import windmusic.composeapp.generated.resources.clear_player_cache
+import windmusic.composeapp.generated.resources.clear_thumbnail_cache
+import windmusic.composeapp.generated.resources.restore_failed
+import windmusic.composeapp.generated.resources.restore_in_progress
 
 class SettingsViewModel(
     private val dataStoreManager: DataStoreManager,

@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.background
@@ -29,9 +29,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.maxrave.domain.mediaservice.handler.ControlState
 import com.maxrave.domain.mediaservice.handler.RepeatState
-import com.maxrave.simpmusic.ui.theme.seed
-import com.maxrave.simpmusic.ui.theme.transparent
-import com.maxrave.simpmusic.viewModel.UIEvent
+import com.maxrave.windmusic.ui.theme.seed
+import com.maxrave.windmusic.ui.theme.transparent
+import com.maxrave.windmusic.viewModel.UIEvent
 
 @Composable
 fun PlayerControlLayout(

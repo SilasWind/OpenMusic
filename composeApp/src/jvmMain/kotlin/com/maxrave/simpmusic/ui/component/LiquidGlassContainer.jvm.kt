@@ -1,11 +1,11 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.layer.GraphicsLayer
-import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
+import com.maxrave.windmusic.expect.ui.PlatformBackdrop
 
 /**
  * Desktop fallback: the Kyant backdrop modifiers are no-ops on JVM, so the glass

@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.screen.home
+package com.maxrave.windmusic.ui.screen.home
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Box
@@ -17,14 +17,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
-import com.maxrave.simpmusic.ui.component.EndOfPage
-import com.maxrave.simpmusic.ui.component.MoodAndGenresContentItem
-import com.maxrave.simpmusic.ui.component.NormalAppBar
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.viewModel.MoodViewModel
+import com.maxrave.windmusic.ui.component.EndOfPage
+import com.maxrave.windmusic.ui.component.MoodAndGenresContentItem
+import com.maxrave.windmusic.ui.component.NormalAppBar
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.viewModel.MoodViewModel
 import org.jetbrains.compose.resources.painterResource
 import org.koin.compose.viewmodel.koinViewModel
-import simpmusic.composeapp.generated.resources.*
+import windmusic.composeapp.generated.resources.*
 
 @Composable
 fun MoodScreen(

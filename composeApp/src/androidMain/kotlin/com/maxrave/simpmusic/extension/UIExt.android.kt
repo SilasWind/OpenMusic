@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.extension
+package com.maxrave.windmusic.extension
 
 import android.app.Activity
 import android.content.Context

@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.viewModel
+package com.maxrave.windmusic.viewModel
 
 import androidx.lifecycle.viewModelScope
 import com.maxrave.common.Config
@@ -26,8 +26,8 @@ import com.maxrave.domain.utils.collectLatestResource
 import com.maxrave.domain.utils.collectResource
 import com.maxrave.domain.utils.toTrack
 import com.maxrave.logger.LogLevel
-import com.maxrave.simpmusic.expect.shareUrl
-import com.maxrave.simpmusic.viewModel.base.BaseViewModel
+import com.maxrave.windmusic.expect.shareUrl
+import com.maxrave.windmusic.viewModel.base.BaseViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -38,19 +38,19 @@ import kotlinx.coroutines.flow.singleOrNull
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.koin.core.component.inject
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.added_to_playlist
-import simpmusic.composeapp.generated.resources.added_to_queue
-import simpmusic.composeapp.generated.resources.added_to_youtube_playlist
-import simpmusic.composeapp.generated.resources.delete_song_from_playlist
-import simpmusic.composeapp.generated.resources.downloading
-import simpmusic.composeapp.generated.resources.error
-import simpmusic.composeapp.generated.resources.error_occurred
-import simpmusic.composeapp.generated.resources.play_next
-import simpmusic.composeapp.generated.resources.removed_download
-import simpmusic.composeapp.generated.resources.removed_from_YouTube_playlist
-import simpmusic.composeapp.generated.resources.share_url
-import simpmusic.composeapp.generated.resources.sleep_timer_off_done
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.added_to_playlist
+import windmusic.composeapp.generated.resources.added_to_queue
+import windmusic.composeapp.generated.resources.added_to_youtube_playlist
+import windmusic.composeapp.generated.resources.delete_song_from_playlist
+import windmusic.composeapp.generated.resources.downloading
+import windmusic.composeapp.generated.resources.error
+import windmusic.composeapp.generated.resources.error_occurred
+import windmusic.composeapp.generated.resources.play_next
+import windmusic.composeapp.generated.resources.removed_download
+import windmusic.composeapp.generated.resources.removed_from_YouTube_playlist
+import windmusic.composeapp.generated.resources.share_url
+import windmusic.composeapp.generated.resources.sleep_timer_off_done
 
 class NowPlayingBottomSheetViewModel(
     private val dataStoreManager: DataStoreManager,

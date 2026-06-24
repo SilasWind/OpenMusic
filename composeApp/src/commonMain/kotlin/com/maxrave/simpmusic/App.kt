@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic
+package com.maxrave.windmusic
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.expandHorizontally
@@ -61,29 +61,29 @@ import com.maxrave.domain.data.player.GenericMediaItem
 import com.maxrave.domain.manager.DataStoreManager
 import com.maxrave.domain.manager.DataStoreManager.Values.TRUE
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.expect.Orientation
-import com.maxrave.simpmusic.expect.currentOrientation
-import com.maxrave.simpmusic.expect.openUrl
-import com.maxrave.simpmusic.expect.ui.layerBackdrop
-import com.maxrave.simpmusic.expect.ui.rememberBackdrop
-import com.maxrave.simpmusic.extension.copy
-import com.maxrave.simpmusic.ui.component.AppBottomNavigationBar
-import com.maxrave.simpmusic.ui.component.AppNavigationRail
-import com.maxrave.simpmusic.ui.component.LiquidGlassAppBottomNavigationBar
-import com.maxrave.simpmusic.ui.navigation.destination.home.NotificationDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.AlbumDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.ArtistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.PlaylistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.player.FullscreenDestination
-import com.maxrave.simpmusic.ui.navigation.graph.AppNavigationGraph
-import com.maxrave.simpmusic.ui.screen.MiniPlayer
-import com.maxrave.simpmusic.ui.screen.player.NowPlayingScreen
-import com.maxrave.simpmusic.ui.screen.player.NowPlayingScreenContent
-import com.maxrave.simpmusic.ui.theme.AppTheme
-import com.maxrave.simpmusic.ui.theme.fontFamily
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.utils.VersionManager
-import com.maxrave.simpmusic.viewModel.SharedViewModel
+import com.maxrave.windmusic.expect.Orientation
+import com.maxrave.windmusic.expect.currentOrientation
+import com.maxrave.windmusic.expect.openUrl
+import com.maxrave.windmusic.expect.ui.layerBackdrop
+import com.maxrave.windmusic.expect.ui.rememberBackdrop
+import com.maxrave.windmusic.extension.copy
+import com.maxrave.windmusic.ui.component.AppBottomNavigationBar
+import com.maxrave.windmusic.ui.component.AppNavigationRail
+import com.maxrave.windmusic.ui.component.LiquidGlassAppBottomNavigationBar
+import com.maxrave.windmusic.ui.navigation.destination.home.NotificationDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.AlbumDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.ArtistDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.PlaylistDestination
+import com.maxrave.windmusic.ui.navigation.destination.player.FullscreenDestination
+import com.maxrave.windmusic.ui.navigation.graph.AppNavigationGraph
+import com.maxrave.windmusic.ui.screen.MiniPlayer
+import com.maxrave.windmusic.ui.screen.player.NowPlayingScreen
+import com.maxrave.windmusic.ui.screen.player.NowPlayingScreenContent
+import com.maxrave.windmusic.ui.theme.AppTheme
+import com.maxrave.windmusic.ui.theme.fontFamily
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.utils.VersionManager
+import com.maxrave.windmusic.viewModel.SharedViewModel
 import com.mikepenz.markdown.m3.Markdown
 import com.mikepenz.markdown.m3.markdownTypography
 import dev.chrisbanes.haze.hazeEffect
@@ -100,20 +100,20 @@ import kotlinx.datetime.toLocalDateTime
 import org.jetbrains.compose.resources.getString
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.cancel
-import simpmusic.composeapp.generated.resources.do_not_show_again
-import simpmusic.composeapp.generated.resources.download
-import simpmusic.composeapp.generated.resources.good_night
-import simpmusic.composeapp.generated.resources.notification
-import simpmusic.composeapp.generated.resources.sleep_timer_off
-import simpmusic.composeapp.generated.resources.this_app_needs_to_access_your_notification
-import simpmusic.composeapp.generated.resources.this_link_is_not_supported
-import simpmusic.composeapp.generated.resources.unknown
-import simpmusic.composeapp.generated.resources.update_available
-import simpmusic.composeapp.generated.resources.update_message
-import simpmusic.composeapp.generated.resources.version_format
-import simpmusic.composeapp.generated.resources.yes
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.cancel
+import windmusic.composeapp.generated.resources.do_not_show_again
+import windmusic.composeapp.generated.resources.download
+import windmusic.composeapp.generated.resources.good_night
+import windmusic.composeapp.generated.resources.notification
+import windmusic.composeapp.generated.resources.sleep_timer_off
+import windmusic.composeapp.generated.resources.this_app_needs_to_access_your_notification
+import windmusic.composeapp.generated.resources.this_link_is_not_supported
+import windmusic.composeapp.generated.resources.unknown
+import windmusic.composeapp.generated.resources.update_available
+import windmusic.composeapp.generated.resources.update_message
+import windmusic.composeapp.generated.resources.version_format
+import windmusic.composeapp.generated.resources.yes
 import kotlin.time.ExperimentalTime
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalTime::class, ExperimentalFoundationApi::class)
@@ -167,23 +167,23 @@ fun App(viewModel: SharedViewModel = koinInject()) {
         val data = intent.data
         Logger.d("MainActivity", "onCreate: $data")
         if (data != null) {
-            if (data == "simpmusic://notification".toUri()) {
+            if (data == "windmusic://notification".toUri()) {
                 viewModel.setIntent(null)
                 navController.navigate(
                     NotificationDestination,
                 )
-            } else if (data.host == "simpmusic.org" || data.scheme == "simpmusic") {
+            } else if (data.host == "simpmusic.org" || data.scheme == "windmusic") {
                 // https://simpmusic.org/app/watch?v=VIDEO_ID
                 // https://simpmusic.org/app/playlist?list=PLAYLIST_ID
                 // https://simpmusic.org/app/channel/CHANNEL_ID
-                // simpmusic://watch?v=VIDEO_ID  (host="watch", no path)
-                // simpmusic://playlist?list=PLAYLIST_ID
-                // simpmusic://channel/CHANNEL_ID
+                // windmusic://watch?v=VIDEO_ID  (host="watch", no path)
+                // windmusic://playlist?list=PLAYLIST_ID
+                // windmusic://channel/CHANNEL_ID
                 val segments = data.pathSegments
                 // For simpmusic.org: segments = ["app", "watch"] → appPath = segments[1]
-                // For simpmusic://: host IS the appPath (e.g. host="watch"), segments = []
+                // For windmusic://: host IS the appPath (e.g. host="watch"), segments = []
                 val appPath =
-                    if (data.scheme == "simpmusic") {
+                    if (data.scheme == "windmusic") {
                         data.host
                     } else {
                         segments.getOrNull(1)
@@ -210,10 +210,10 @@ fun App(viewModel: SharedViewModel = koinInject()) {
                     }
 
                     "channel", "c" -> {
-                        // simpmusic://channel/UCxxx → segments = ["UCxxx"]
+                        // windmusic://channel/UCxxx → segments = ["UCxxx"]
                         // simpmusic.org/app/channel/UCxxx → segments = ["app", "channel", "UCxxx"]
                         val artistId =
-                            if (data.scheme == "simpmusic") {
+                            if (data.scheme == "windmusic") {
                                 segments.firstOrNull()
                             } else {
                                 segments.getOrNull(2)

@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.expect.ui
+package com.maxrave.windmusic.expect.ui
 
 import androidx.compose.foundation.HorizontalScrollbar
 import androidx.compose.foundation.ScrollbarStyle
@@ -9,8 +9,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import com.maxrave.simpmusic.Platform
-import com.maxrave.simpmusic.getPlatform
+import com.maxrave.windmusic.Platform
+import com.maxrave.windmusic.getPlatform
 
 @Composable
 actual fun HorizontalScrollBar(

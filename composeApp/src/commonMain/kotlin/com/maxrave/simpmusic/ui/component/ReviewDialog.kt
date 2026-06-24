@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -15,11 +15,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withLink
 import androidx.compose.ui.window.DialogProperties
-import com.maxrave.simpmusic.ui.theme.seed
-import com.maxrave.simpmusic.ui.theme.typo
+import com.maxrave.windmusic.ui.theme.seed
+import com.maxrave.windmusic.ui.theme.typo
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
-import simpmusic.composeapp.generated.resources.*
+import windmusic.composeapp.generated.resources.*
 
 @Composable
 @ExperimentalMaterial3Api
@@ -40,7 +40,7 @@ fun ReviewDialog(
         confirmButton = {
             TextButton(onClick = {
                 onDoneReview.invoke()
-                uriHandler.openUri("https://github.com/maxrave-dev/SimpMusic")
+                uriHandler.openUri("https://github.com/maxrave-dev/WindMusic")
             }) {
                 Text(
                     stringResource(Res.string.give_a_star),
@@ -73,12 +73,12 @@ fun ReviewDialog(
                     append(stringResource(Res.string.if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on))
                     withLink(
                         LinkAnnotation.Url(
-                            "https://www.producthunt.com/products/simpmusic",
+                            "https://www.producthunt.com/products/windmusic",
                             TextLinkStyles(style = SpanStyle(textDecoration = TextDecoration.Underline, color = seed)),
                         ) {
                             onDoneReview.invoke()
                             onDismissRequest.invoke()
-                            uriHandler.openUri("https://www.producthunt.com/products/simpmusic")
+                            uriHandler.openUri("https://www.producthunt.com/products/windmusic")
                         },
                     ) {
                         append(" ProductHunt")

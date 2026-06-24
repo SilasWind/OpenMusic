@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.viewModel
+package com.maxrave.windmusic.viewModel
 
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.viewModelScope
@@ -37,9 +37,9 @@ import com.maxrave.domain.utils.toArrayListTrack
 import com.maxrave.domain.utils.toSongEntity
 import com.maxrave.domain.utils.toTrack
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.pagination.PagingActions
-import com.maxrave.simpmusic.ui.theme.md_theme_dark_background
-import com.maxrave.simpmusic.viewModel.base.BaseViewModel
+import com.maxrave.windmusic.pagination.PagingActions
+import com.maxrave.windmusic.ui.theme.md_theme_dark_background
+import com.maxrave.windmusic.viewModel.base.BaseViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -56,27 +56,27 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.datetime.LocalDateTime
 import org.koin.core.component.inject
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.add_to_queue
-import simpmusic.composeapp.generated.resources.added_to_playlist
-import simpmusic.composeapp.generated.resources.added_to_queue
-import simpmusic.composeapp.generated.resources.added_to_youtube_playlist
-import simpmusic.composeapp.generated.resources.can_t_add_to_youtube_playlist
-import simpmusic.composeapp.generated.resources.can_t_delete_from_youtube_playlist
-import simpmusic.composeapp.generated.resources.delete
-import simpmusic.composeapp.generated.resources.delete_song_from_playlist
-import simpmusic.composeapp.generated.resources.error
-import simpmusic.composeapp.generated.resources.playlist
-import simpmusic.composeapp.generated.resources.playlist_is_empty
-import simpmusic.composeapp.generated.resources.removed_from_YouTube_playlist
-import simpmusic.composeapp.generated.resources.suggest
-import simpmusic.composeapp.generated.resources.synced
-import simpmusic.composeapp.generated.resources.syncing
-import simpmusic.composeapp.generated.resources.unsynced
-import simpmusic.composeapp.generated.resources.unsyncing
-import simpmusic.composeapp.generated.resources.updated
-import simpmusic.composeapp.generated.resources.updated_to_youtube_playlist
-import simpmusic.composeapp.generated.resources.updating
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.add_to_queue
+import windmusic.composeapp.generated.resources.added_to_playlist
+import windmusic.composeapp.generated.resources.added_to_queue
+import windmusic.composeapp.generated.resources.added_to_youtube_playlist
+import windmusic.composeapp.generated.resources.can_t_add_to_youtube_playlist
+import windmusic.composeapp.generated.resources.can_t_delete_from_youtube_playlist
+import windmusic.composeapp.generated.resources.delete
+import windmusic.composeapp.generated.resources.delete_song_from_playlist
+import windmusic.composeapp.generated.resources.error
+import windmusic.composeapp.generated.resources.playlist
+import windmusic.composeapp.generated.resources.playlist_is_empty
+import windmusic.composeapp.generated.resources.removed_from_YouTube_playlist
+import windmusic.composeapp.generated.resources.suggest
+import windmusic.composeapp.generated.resources.synced
+import windmusic.composeapp.generated.resources.syncing
+import windmusic.composeapp.generated.resources.unsynced
+import windmusic.composeapp.generated.resources.unsyncing
+import windmusic.composeapp.generated.resources.updated
+import windmusic.composeapp.generated.resources.updated_to_youtube_playlist
+import windmusic.composeapp.generated.resources.updating
 
 class LocalPlaylistViewModel(
     private val dataStoreManager: DataStoreManager,

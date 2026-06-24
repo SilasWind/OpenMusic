@@ -120,9 +120,9 @@
 
 -dontwarn org.slf4j.impl.StaticLoggerBinder
 -dontwarn kotlinx.serialization.internal.ClassValueReferences
--keep class com.maxrave.simpmusic.data.model.** { *; }
--keep class com.maxrave.simpmusic.extension.AllExtKt { *; }
--keep class com.maxrave.simpmusic.extension.AllExtKt$* { *; }
+-keep class com.maxrave.windmusic.data.model.** { *; }
+-keep class com.maxrave.windmusic.extension.AllExtKt { *; }
+-keep class com.maxrave.windmusic.extension.AllExtKt$* { *; }
 -keep class com.maxrave.kotlinytmusicscraper.extension.MapExtKt$* { *; }
 
 ## Removes all Logs as they cause perfomance issues in prod
@@ -278,7 +278,7 @@
 -keep class org.simpmusic.lyrics.models.** { *; }
 -keep class org.simpmusic.nowplayingcenter.** { *; }
 -keep class io.github.selemba1000.** { *; }
--keep class com.simpmusic.lyrics.parser.** { *; }
+-keep class com.windmusic.lyrics.parser.** { *; }
 
 # dbus-java (used by JMTC/NPYC for Linux MPRIS)
 -keep class org.freedesktop.dbus.** { *; }

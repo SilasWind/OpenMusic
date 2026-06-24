@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.theme
+package com.maxrave.windmusic.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

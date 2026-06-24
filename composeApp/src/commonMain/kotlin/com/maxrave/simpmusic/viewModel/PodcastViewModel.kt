@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.viewModel
+package com.maxrave.windmusic.viewModel
 
 import androidx.lifecycle.viewModelScope
 import com.maxrave.common.Config
@@ -11,8 +11,8 @@ import com.maxrave.domain.mediaservice.handler.QueueData
 import com.maxrave.domain.repository.PodcastRepository
 import com.maxrave.domain.utils.Resource
 import com.maxrave.domain.utils.toTrack
-import com.maxrave.simpmusic.expect.shareUrl
-import com.maxrave.simpmusic.viewModel.base.BaseViewModel
+import com.maxrave.windmusic.expect.shareUrl
+import com.maxrave.windmusic.viewModel.base.BaseViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -21,8 +21,8 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.share_url
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.share_url
 
 // UI state cho podcast
 sealed class PodcastUIState {

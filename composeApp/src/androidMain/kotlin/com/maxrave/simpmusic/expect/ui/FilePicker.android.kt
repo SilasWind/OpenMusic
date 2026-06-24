@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.expect.ui
+package com.maxrave.windmusic.expect.ui
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts

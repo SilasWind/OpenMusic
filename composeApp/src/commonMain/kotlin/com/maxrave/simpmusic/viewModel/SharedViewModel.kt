@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.viewModel
+package com.maxrave.windmusic.viewModel
 
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.lifecycle.viewModelScope
@@ -60,12 +60,12 @@ import com.maxrave.domain.utils.toSyncedLyrics
 import com.maxrave.domain.utils.toTrack
 import com.maxrave.logger.LogLevel
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.Platform
-import com.maxrave.simpmusic.expect.getDownloadFolderPath
-import com.maxrave.simpmusic.expect.ui.toByteArray
-import com.maxrave.simpmusic.getPlatform
-import com.maxrave.simpmusic.utils.VersionManager
-import com.maxrave.simpmusic.viewModel.base.BaseViewModel
+import com.maxrave.windmusic.Platform
+import com.maxrave.windmusic.expect.getDownloadFolderPath
+import com.maxrave.windmusic.expect.ui.toByteArray
+import com.maxrave.windmusic.getPlatform
+import com.maxrave.windmusic.utils.VersionManager
+import com.maxrave.windmusic.viewModel.base.BaseViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.Job
@@ -90,15 +90,15 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.added_to_queue
-import simpmusic.composeapp.generated.resources.added_to_youtube_liked
-import simpmusic.composeapp.generated.resources.error
-import simpmusic.composeapp.generated.resources.play_next
-import simpmusic.composeapp.generated.resources.removed_from_youtube_liked
-import simpmusic.composeapp.generated.resources.shared
-import simpmusic.composeapp.generated.resources.updated
-import simpmusic.composeapp.generated.resources.vote_submitted
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.added_to_queue
+import windmusic.composeapp.generated.resources.added_to_youtube_liked
+import windmusic.composeapp.generated.resources.error
+import windmusic.composeapp.generated.resources.play_next
+import windmusic.composeapp.generated.resources.removed_from_youtube_liked
+import windmusic.composeapp.generated.resources.shared
+import windmusic.composeapp.generated.resources.updated
+import windmusic.composeapp.generated.resources.vote_submitted
 import java.io.FileOutputStream
 import kotlin.math.abs
 import kotlin.reflect.KClass
@@ -1093,11 +1093,11 @@ class SharedViewModel(
                                     ).collectLatest {
                                         when (it) {
                                             is Resource.Error -> {
-                                                Logger.w(tag, "Vote SimpMusic Translated Lyrics Error ${it.message}")
+                                                Logger.w(tag, "Vote WindMusic Translated Lyrics Error ${it.message}")
                                             }
 
                                             is Resource.Success -> {
-                                                Logger.d(tag, "Vote SimpMusic Translated Lyrics Success")
+                                                Logger.d(tag, "Vote WindMusic Translated Lyrics Success")
                                             }
                                         }
                                     }
@@ -1151,11 +1151,11 @@ class SharedViewModel(
                                 ).collect {
                                     when (it) {
                                         is Resource.Error -> {
-                                            log("Insert SimpMusic Translated Lyrics Error ${it.message}")
+                                            log("Insert WindMusic Translated Lyrics Error ${it.message}")
                                         }
 
                                         is Resource.Success -> {
-                                            log("Insert SimpMusic Translated Lyrics Success")
+                                            log("Insert WindMusic Translated Lyrics Success")
                                         }
                                     }
                                 }
@@ -1203,11 +1203,11 @@ class SharedViewModel(
                                 ).collect {
                                     when (it) {
                                         is Resource.Error -> {
-                                            Logger.w(tag, "Insert SimpMusic Lyrics Error ${it.message}")
+                                            Logger.w(tag, "Insert WindMusic Lyrics Error ${it.message}")
                                         }
 
                                         is Resource.Success -> {
-                                            Logger.d(tag, "Insert SimpMusic Lyrics Success")
+                                            Logger.d(tag, "Insert WindMusic Lyrics Success")
                                         }
                                     }
                                 }
@@ -1288,10 +1288,10 @@ class SharedViewModel(
         duration: Int,
     ) {
         lyricsCanvasRepository.getSimpMusicLyrics(videoId).collectLatest {
-            Logger.w(tag, "Get SimpMusic Lyrics for $videoId: $it")
+            Logger.w(tag, "Get WindMusic Lyrics for $videoId: $it")
             val data = it.data
             if (it is Resource.Success && data != null) {
-                Logger.d(tag, "Get SimpMusic Lyrics Success")
+                Logger.d(tag, "Get WindMusic Lyrics Success")
                 updateLyrics(
                     videoId,
                     duration,
@@ -1477,10 +1477,10 @@ class SharedViewModel(
             val data = response.data
             when (response) {
                 is Resource.Success if (data != null) -> {
-                    // If SimpMusic translated lyrics are RICH_SYNCED (word-by-word),
+                    // If WindMusic translated lyrics are RICH_SYNCED (word-by-word),
                     // convert to LINE_SYNCED, downvote, and fallback to AI translation
                     if (data.syncType == "RICH_SYNCED") {
-                        Logger.w(tag, "SimpMusic translated lyrics are RICH_SYNCED, downvoting and falling back to AI")
+                        Logger.w(tag, "WindMusic translated lyrics are RICH_SYNCED, downvoting and falling back to AI")
                         val simpMusicLyricsId = data.simpMusicLyrics?.id
                         if (!simpMusicLyricsId.isNullOrEmpty()) {
                             viewModelScope.launch {
@@ -1497,7 +1497,7 @@ class SharedViewModel(
                         // Fallback to AI translation
                         getAITranslationLyrics(videoId, lyrics)
                     } else {
-                        Logger.d(tag, "Get SimpMusic Translated Lyrics Success")
+                        Logger.d(tag, "Get WindMusic Translated Lyrics Success")
                         updateLyrics(
                             videoId,
                             0,
@@ -1509,7 +1509,7 @@ class SharedViewModel(
                 }
 
                 else -> {
-                    Logger.w(tag, "Get SimpMusic Translated Lyrics Error: ${response.message}")
+                    Logger.w(tag, "Get WindMusic Translated Lyrics Error: ${response.message}")
                     getAITranslationLyrics(
                         videoId,
                         lyrics,
@@ -1787,7 +1787,7 @@ class SharedViewModel(
     val lyricsVoteState: StateFlow<VoteData?> = _lyricsVoteState.asStateFlow()
 
     /**
-     * Vote for SimpMusic original lyrics (upvote or downvote)
+     * Vote for WindMusic original lyrics (upvote or downvote)
      * @param upvote true for upvote, false for downvote
      */
     fun voteLyrics(upvote: Boolean) {
@@ -1796,7 +1796,7 @@ class SharedViewModel(
         val simpMusicLyricsId = lyricsData?.lyrics?.simpMusicLyrics?.id ?: return
 
         if (lyricsProvider != LyricsProvider.SIMPMUSIC || simpMusicLyricsId.isEmpty()) {
-            Logger.w(tag, "Cannot vote: not a SimpMusic lyrics or missing ID")
+            Logger.w(tag, "Cannot vote: not a WindMusic lyrics or missing ID")
             return
         }
 
@@ -1813,7 +1813,7 @@ class SharedViewModel(
                 ).collectLatest { result ->
                     when (result) {
                         is Resource.Error -> {
-                            Logger.w(tag, "Vote SimpMusic Lyrics Error ${result.message}")
+                            Logger.w(tag, "Vote WindMusic Lyrics Error ${result.message}")
                             _lyricsVoteState.update {
                                 it?.copy(
                                     state = VoteState.Error(result.message ?: "Unknown error"),
@@ -1822,7 +1822,7 @@ class SharedViewModel(
                         }
 
                         is Resource.Success -> {
-                            Logger.d(tag, "Vote SimpMusic Lyrics Success")
+                            Logger.d(tag, "Vote WindMusic Lyrics Success")
                             _lyricsVoteState.update {
                                 it?.copy(
                                     state = VoteState.Success(upvote),
@@ -1842,7 +1842,7 @@ class SharedViewModel(
     }
 
     /**
-     * Vote for SimpMusic translated lyrics (upvote or downvote)
+     * Vote for WindMusic translated lyrics (upvote or downvote)
      * @param upvote true for upvote, false for downvote
      */
     fun voteTranslatedLyrics(upvote: Boolean) {
@@ -1851,7 +1851,7 @@ class SharedViewModel(
         val simpMusicLyricsId = translatedLyrics?.first?.simpMusicLyrics?.id ?: return
 
         if (lyricsProvider != LyricsProvider.SIMPMUSIC || simpMusicLyricsId.isEmpty()) {
-            Logger.w(tag, "Cannot vote: not a SimpMusic translated lyrics or missing ID")
+            Logger.w(tag, "Cannot vote: not a WindMusic translated lyrics or missing ID")
             return
         }
 
@@ -1868,7 +1868,7 @@ class SharedViewModel(
                 ).collectLatest { result ->
                     when (result) {
                         is Resource.Error -> {
-                            Logger.w(tag, "Vote SimpMusic Translated Lyrics Error ${result.message}")
+                            Logger.w(tag, "Vote WindMusic Translated Lyrics Error ${result.message}")
                             _translatedVoteState.update {
                                 it?.copy(
                                     state = VoteState.Error(result.message ?: "Unknown error"),
@@ -1877,7 +1877,7 @@ class SharedViewModel(
                         }
 
                         is Resource.Success -> {
-                            Logger.d(tag, "Vote SimpMusic Translated Lyrics Success")
+                            Logger.d(tag, "Vote WindMusic Translated Lyrics Success")
                             _translatedVoteState.update {
                                 it?.copy(
                                     state = VoteState.Success(upvote),

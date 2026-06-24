@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.expect.ui
+package com.maxrave.windmusic.expect.ui
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Box
@@ -14,12 +14,12 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
-import com.maxrave.simpmusic.expect.openUrl
-import com.maxrave.simpmusic.ui.theme.typo
+import com.maxrave.windmusic.expect.openUrl
+import com.maxrave.windmusic.ui.theme.typo
 import org.jetbrains.compose.resources.stringResource
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.desktop_webview_description
-import simpmusic.composeapp.generated.resources.open_blog_post
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.desktop_webview_description
+import windmusic.composeapp.generated.resources.open_blog_post
 import java.net.CookieHandler
 import java.net.CookieManager
 import java.net.URI

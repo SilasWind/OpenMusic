@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.expect.ui
+package com.maxrave.windmusic.expect.ui
 
 import android.content.Intent
 import android.media.audiofx.AudioEffect
@@ -11,8 +11,8 @@ import kotlinx.coroutines.runBlocking
 import multiplatform.network.cmptoast.ToastGravity
 import multiplatform.network.cmptoast.showToast
 import org.jetbrains.compose.resources.getString
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.no_equalizer
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.no_equalizer
 
 @Composable
 actual fun openEqResult(audioSessionId: Int): OpenEqLauncher {

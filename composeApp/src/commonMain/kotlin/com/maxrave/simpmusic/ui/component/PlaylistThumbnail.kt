@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -33,8 +33,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.maxrave.logger.Logger
 import org.jetbrains.compose.resources.painterResource
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.monochrome
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.monochrome
 import kotlin.math.abs
 
 @Composable

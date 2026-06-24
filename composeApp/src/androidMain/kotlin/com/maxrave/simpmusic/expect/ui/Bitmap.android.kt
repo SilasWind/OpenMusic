@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.expect.ui
+package com.maxrave.windmusic.expect.ui
 
 import android.graphics.Bitmap.CompressFormat.JPEG
 import androidx.compose.ui.graphics.ImageBitmap

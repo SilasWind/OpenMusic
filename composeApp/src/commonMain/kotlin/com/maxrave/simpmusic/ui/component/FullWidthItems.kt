@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.Crossfade
@@ -76,7 +76,7 @@ import com.maxrave.domain.data.type.PlaylistType
 import com.maxrave.domain.repository.SongRepository
 import com.maxrave.domain.utils.connectArtists
 import com.maxrave.domain.utils.toListName
-import com.maxrave.simpmusic.ui.theme.typo
+import com.maxrave.windmusic.ui.theme.typo
 import io.github.alexzhirkevich.compottie.Compottie
 import io.github.alexzhirkevich.compottie.LottieCompositionSpec
 import io.github.alexzhirkevich.compottie.rememberLottieComposition
@@ -86,18 +86,18 @@ import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.add_to_queue
-import simpmusic.composeapp.generated.resources.album
-import simpmusic.composeapp.generated.resources.artists
-import simpmusic.composeapp.generated.resources.baseline_add_24
-import simpmusic.composeapp.generated.resources.baseline_more_vert_24
-import simpmusic.composeapp.generated.resources.download_for_offline_white
-import simpmusic.composeapp.generated.resources.holder
-import simpmusic.composeapp.generated.resources.playlist
-import simpmusic.composeapp.generated.resources.podcasts
-import simpmusic.composeapp.generated.resources.radio
-import simpmusic.composeapp.generated.resources.you
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.add_to_queue
+import windmusic.composeapp.generated.resources.album
+import windmusic.composeapp.generated.resources.artists
+import windmusic.composeapp.generated.resources.baseline_add_24
+import windmusic.composeapp.generated.resources.baseline_more_vert_24
+import windmusic.composeapp.generated.resources.download_for_offline_white
+import windmusic.composeapp.generated.resources.holder
+import windmusic.composeapp.generated.resources.playlist
+import windmusic.composeapp.generated.resources.podcasts
+import windmusic.composeapp.generated.resources.radio
+import windmusic.composeapp.generated.resources.you
 import kotlin.math.roundToInt
 
 /**

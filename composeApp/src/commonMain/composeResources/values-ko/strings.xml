@@ -201,8 +201,8 @@
     <string name="skip_sponsor_part_of_video">동영상의 스폰서 구간 건너뛰기</string>
     <string name="customactivityoncrash_error_activity_error_occurred_explanation">알 수 없는 오류가 발생했습니다. 불편을 드려 죄송합니다.</string>
     <string name="customactivityoncrash_error_activity_restart_app">앱 다시 시작</string>
-    <string name="help_build_lyrics_database">SimpMusic 가사에서 가사 데이터베이스를 구축할 수 있도록 도움</string>
-    <string name="help_build_lyrics_database_description">저장된 가사를 SimpMusic 가사 데이터베이스로 전송</string>
+    <string name="help_build_lyrics_database">WindMusic 가사에서 가사 데이터베이스를 구축할 수 있도록 도움</string>
+    <string name="help_build_lyrics_database_description">저장된 가사를 WindMusic 가사 데이터베이스로 전송</string>
     <string name="customactivityoncrash_error_activity_close_app">앱 종료</string>
     <string name="customactivityoncrash_error_activity_error_details">오류 정보</string>
     <string name="customactivityoncrash_error_activity_error_details_title">오류 상세</string>
@@ -254,7 +254,7 @@
     <string name="email">이메일</string>
     <string name="password">비밀번호</string>
     <string name="please_enter_your_email_and_password">이메일과 비밀번호를 입력해 주십시오</string>
-    <string name="translation_language_message">언어 코드 2글자(예: ko)를 입력합니다. SimpMusic 앱의 언어와 동일하게 설정하려면, 입력란을 비워 둡니다.</string>
+    <string name="translation_language_message">언어 코드 2글자(예: ko)를 입력합니다. WindMusic 앱의 언어와 동일하게 설정하려면, 입력란을 비워 둡니다.</string>
     <string name="invalid_language_code">잘못된 언어 코드</string>
     <string name="lyrics_provider_youtube">YouTube에서 제공된 가사</string>
     <string name="limit_player_cache">플레이어 캐시 제한</string>
@@ -446,14 +446,14 @@
     <string name="contributor_name">기여자 이름</string>
     <string name="contributor_email">기여자 메일</string>
     <string name="anonymous">익명</string>
-    <string name="simpmusic_lyrics">SimpMusic 가사</string>
-    <string name="lyrics_provider_simpmusic">SimpMusic 가사에서 제공된 가사</string>
+    <string name="simpmusic_lyrics">WindMusic 가사</string>
+    <string name="lyrics_provider_simpmusic">WindMusic 가사에서 제공된 가사</string>
     <string name="backup_in_progress">백업 진행 중</string>
     <string name="restore_in_progress">복원 진행 중</string>
     <string name="backup_downloaded">다운로드한 데이터 백업</string>
     <string name="backup_downloaded_description">모든 다운로드한 음악 데이터를 백업</string>
     <string name="auto_backup">자동 백업</string>
-    <string name="auto_backup_description">데이터를 Downloads/SimpMusic 폴더로 자동 백업합니다</string>
+    <string name="auto_backup_description">데이터를 Downloads/WindMusic 폴더로 자동 백업합니다</string>
     <string name="backup_frequency">백업 주기</string>
     <string name="daily">매일</string>
     <string name="weekly">매주</string>
@@ -512,7 +512,7 @@
     <string name="downvote">반대</string>
     <string name="vote_submitted">가사에 투표해주셔서 감사합니다!</string>
     <string name="vote_error">제출 실패</string>
-    <string name="open_app">SimpMusic 열기</string>
+    <string name="open_app">WindMusic 열기</string>
     <string name="close_miniplayer">미니 플레이어 닫기</string>
     <string name="open_miniplayer">미니 플레이어 열기</string>
     <string name="quit_app">앱 종료</string>

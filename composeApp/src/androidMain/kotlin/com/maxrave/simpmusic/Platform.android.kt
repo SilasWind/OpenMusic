@@ -1,3 +1,3 @@
-package com.maxrave.simpmusic
+package com.maxrave.windmusic
 
 actual fun getPlatform(): Platform = Platform.Android

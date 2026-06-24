@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.expect
+package com.maxrave.windmusic.expect
 
 /**
  * Platform-specific function to toggle mini player window.

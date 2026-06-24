@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
@@ -11,11 +11,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.layer.GraphicsLayer
 import androidx.compose.ui.unit.dp
-import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
+import com.maxrave.windmusic.expect.ui.PlatformBackdrop
 import org.jetbrains.compose.resources.DrawableResource
 
 /**
- * Applies the SimpMusic liquid-glass effect to any element.
+ * Applies the WindMusic liquid-glass effect to any element.
  *
  * This is the single platform-specific primitive behind the glass buttons that
  * used to be hand-wired inline on every screen. It encapsulates the per-surface
@@ -26,7 +26,7 @@ import org.jetbrains.compose.resources.DrawableResource
  * keep working.
  *
  * The element MUST be a sibling of the backdrop source (the box carrying
- * [com.maxrave.simpmusic.expect.ui.layerBackdrop]); nesting it inside the source
+ * [com.maxrave.windmusic.expect.ui.layerBackdrop]); nesting it inside the source
  * creates a render-feedback loop that crashes the RuntimeShader.
  *
  * On desktop (JVM) the underlying backdrop modifiers are no-ops, so this only

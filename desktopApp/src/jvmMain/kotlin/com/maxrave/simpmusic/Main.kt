@@ -1,7 +1,7 @@
-package com.maxrave.simpmusic
+package com.maxrave.windmusic
 
 /**
- * Thin entry point for SimpMusic Desktop.
+ * Thin entry point for WindMusic Desktop.
  *
  * All window setup, VLC bootstrap, Sentry init, Koin loading, deep link
  * handling, mini-player wiring, and tray integration live in

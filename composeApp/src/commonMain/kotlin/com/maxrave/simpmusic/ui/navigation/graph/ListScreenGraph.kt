@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.navigation.graph
+package com.maxrave.windmusic.ui.navigation.graph
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.PaddingValues
@@ -7,18 +7,18 @@ import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.toRoute
-import com.maxrave.simpmusic.ui.navigation.destination.list.AlbumDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.ArtistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.LocalPlaylistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.MoreAlbumsDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.PlaylistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.PodcastDestination
-import com.maxrave.simpmusic.ui.screen.library.LocalPlaylistScreen
-import com.maxrave.simpmusic.ui.screen.other.AlbumScreen
-import com.maxrave.simpmusic.ui.screen.other.ArtistScreen
-import com.maxrave.simpmusic.ui.screen.other.MoreAlbumsScreen
-import com.maxrave.simpmusic.ui.screen.other.PlaylistScreen
-import com.maxrave.simpmusic.ui.screen.other.PodcastScreen
+import com.maxrave.windmusic.ui.navigation.destination.list.AlbumDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.ArtistDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.LocalPlaylistDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.MoreAlbumsDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.PlaylistDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.PodcastDestination
+import com.maxrave.windmusic.ui.screen.library.LocalPlaylistScreen
+import com.maxrave.windmusic.ui.screen.other.AlbumScreen
+import com.maxrave.windmusic.ui.screen.other.ArtistScreen
+import com.maxrave.windmusic.ui.screen.other.MoreAlbumsScreen
+import com.maxrave.windmusic.ui.screen.other.PlaylistScreen
+import com.maxrave.windmusic.ui.screen.other.PodcastScreen
 
 @ExperimentalMaterial3Api
 @ExperimentalFoundationApi

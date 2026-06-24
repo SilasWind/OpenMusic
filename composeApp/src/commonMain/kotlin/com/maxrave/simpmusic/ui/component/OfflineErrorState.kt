@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -27,13 +27,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import com.maxrave.simpmusic.ui.theme.typo
+import com.maxrave.windmusic.ui.theme.typo
 import org.jetbrains.compose.resources.stringResource
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.home_offline_subtitle
-import simpmusic.composeapp.generated.resources.home_offline_title
-import simpmusic.composeapp.generated.resources.listen_to_downloaded
-import simpmusic.composeapp.generated.resources.retry
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.home_offline_subtitle
+import windmusic.composeapp.generated.resources.home_offline_title
+import windmusic.composeapp.generated.resources.listen_to_downloaded
+import windmusic.composeapp.generated.resources.retry
 
 /**
  * Spotify-style minimal offline / error state shown on the Home tab when

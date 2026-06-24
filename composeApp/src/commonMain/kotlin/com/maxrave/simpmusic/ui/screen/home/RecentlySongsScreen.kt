@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.screen.home
+package com.maxrave.windmusic.ui.screen.home
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.PaddingValues
@@ -30,18 +30,18 @@ import com.maxrave.domain.data.entities.SongEntity
 import com.maxrave.domain.mediaservice.handler.PlaylistType
 import com.maxrave.domain.mediaservice.handler.QueueData
 import com.maxrave.domain.utils.toTrack
-import com.maxrave.simpmusic.ui.component.ArtistFullWidthItems
-import com.maxrave.simpmusic.ui.component.CenterLoadingBox
-import com.maxrave.simpmusic.ui.component.EndOfPage
-import com.maxrave.simpmusic.ui.component.PlaylistFullWidthItems
-import com.maxrave.simpmusic.ui.component.RippleIconButton
-import com.maxrave.simpmusic.ui.component.SongFullWidthItems
-import com.maxrave.simpmusic.ui.navigation.destination.list.AlbumDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.ArtistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.PlaylistDestination
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.viewModel.RecentlySongsViewModel
-import com.maxrave.simpmusic.viewModel.SharedViewModel
+import com.maxrave.windmusic.ui.component.ArtistFullWidthItems
+import com.maxrave.windmusic.ui.component.CenterLoadingBox
+import com.maxrave.windmusic.ui.component.EndOfPage
+import com.maxrave.windmusic.ui.component.PlaylistFullWidthItems
+import com.maxrave.windmusic.ui.component.RippleIconButton
+import com.maxrave.windmusic.ui.component.SongFullWidthItems
+import com.maxrave.windmusic.ui.navigation.destination.list.AlbumDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.ArtistDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.PlaylistDestination
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.viewModel.RecentlySongsViewModel
+import com.maxrave.windmusic.viewModel.SharedViewModel
 import dev.chrisbanes.haze.hazeEffect
 import dev.chrisbanes.haze.hazeSource
 import dev.chrisbanes.haze.materials.ExperimentalHazeMaterialsApi
@@ -51,10 +51,10 @@ import kotlinx.coroutines.flow.map
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
-import simpmusic.composeapp.generated.resources.error
-import simpmusic.composeapp.generated.resources.recently_added
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
+import windmusic.composeapp.generated.resources.error
+import windmusic.composeapp.generated.resources.recently_added
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalHazeMaterialsApi::class)
 @Composable

@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic
+package com.maxrave.windmusic
 
 sealed class Platform {
     object Android : Platform()

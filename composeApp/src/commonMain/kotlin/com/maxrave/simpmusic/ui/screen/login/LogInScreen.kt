@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.screen.login
+package com.maxrave.windmusic.ui.screen.login
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -31,15 +31,15 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.maxrave.common.Config
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.expect.ui.PlatformWebView
-import com.maxrave.simpmusic.expect.ui.createWebViewCookieManager
-import com.maxrave.simpmusic.expect.ui.rememberWebViewState
-import com.maxrave.simpmusic.ui.component.DevLogInBottomSheet
-import com.maxrave.simpmusic.ui.component.DevLogInType
-import com.maxrave.simpmusic.ui.component.RippleIconButton
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.viewModel.LogInViewModel
-import com.maxrave.simpmusic.viewModel.SettingsViewModel
+import com.maxrave.windmusic.expect.ui.PlatformWebView
+import com.maxrave.windmusic.expect.ui.createWebViewCookieManager
+import com.maxrave.windmusic.expect.ui.rememberWebViewState
+import com.maxrave.windmusic.ui.component.DevLogInBottomSheet
+import com.maxrave.windmusic.ui.component.DevLogInType
+import com.maxrave.windmusic.ui.component.RippleIconButton
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.viewModel.LogInViewModel
+import com.maxrave.windmusic.viewModel.SettingsViewModel
 import dev.chrisbanes.haze.hazeEffect
 import dev.chrisbanes.haze.hazeSource
 import dev.chrisbanes.haze.materials.ExperimentalHazeMaterialsApi
@@ -49,11 +49,11 @@ import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.getString
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
-import simpmusic.composeapp.generated.resources.log_in
-import simpmusic.composeapp.generated.resources.login_failed
-import simpmusic.composeapp.generated.resources.login_success
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
+import windmusic.composeapp.generated.resources.log_in
+import windmusic.composeapp.generated.resources.login_failed
+import windmusic.composeapp.generated.resources.login_success
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalHazeMaterialsApi::class)
 @Composable
@@ -79,8 +79,8 @@ fun LoginScreen(
                 "LogInScreen",
                 "WebViewState: ${
                     when (it) {
-                        is com.maxrave.simpmusic.expect.ui.WebViewState.Finished -> "Finished"
-                        is com.maxrave.simpmusic.expect.ui.WebViewState.Loading -> "Loading ${it.progress}%"
+                        is com.maxrave.windmusic.expect.ui.WebViewState.Finished -> "Finished"
+                        is com.maxrave.windmusic.expect.ui.WebViewState.Loading -> "Loading ${it.progress}%"
                     }
                 }",
             )

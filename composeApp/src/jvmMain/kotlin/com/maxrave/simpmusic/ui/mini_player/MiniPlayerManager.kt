@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.mini_player
+package com.maxrave.windmusic.ui.mini_player
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf

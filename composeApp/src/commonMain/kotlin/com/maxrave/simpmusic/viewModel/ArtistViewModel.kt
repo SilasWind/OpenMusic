@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.viewModel
+package com.maxrave.windmusic.viewModel
 
 import androidx.lifecycle.viewModelScope
 import com.maxrave.common.Config
@@ -17,20 +17,20 @@ import com.maxrave.domain.mediaservice.handler.QueueData
 import com.maxrave.domain.repository.ArtistRepository
 import com.maxrave.domain.repository.SongRepository
 import com.maxrave.domain.utils.Resource
-import com.maxrave.simpmusic.extension.toArtistScreenData
-import com.maxrave.simpmusic.viewModel.ArtistScreenState.Error
-import com.maxrave.simpmusic.viewModel.ArtistScreenState.Loading
-import com.maxrave.simpmusic.viewModel.ArtistScreenState.Success
-import com.maxrave.simpmusic.viewModel.base.BaseViewModel
+import com.maxrave.windmusic.extension.toArtistScreenData
+import com.maxrave.windmusic.viewModel.ArtistScreenState.Error
+import com.maxrave.windmusic.viewModel.ArtistScreenState.Loading
+import com.maxrave.windmusic.viewModel.ArtistScreenState.Success
+import com.maxrave.windmusic.viewModel.base.BaseViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.radio
-import simpmusic.composeapp.generated.resources.shuffle
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.radio
+import windmusic.composeapp.generated.resources.shuffle
 
 class ArtistViewModel(
     private val artistRepository: ArtistRepository,

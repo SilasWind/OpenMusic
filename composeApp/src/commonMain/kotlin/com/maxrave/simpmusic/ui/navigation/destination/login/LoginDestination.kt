@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.navigation.destination.login
+package com.maxrave.windmusic.ui.navigation.destination.login
 
 import kotlinx.serialization.Serializable
 

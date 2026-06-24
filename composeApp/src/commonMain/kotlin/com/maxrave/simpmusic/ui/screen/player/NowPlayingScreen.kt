@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalMaterial3Api::class)
 
-package com.maxrave.simpmusic.ui.screen.player
+package com.maxrave.windmusic.ui.screen.player
 
 import androidx.compose.animation.Animatable
 import androidx.compose.animation.AnimatedVisibility
@@ -135,46 +135,46 @@ import com.maxrave.common.Config.MAIN_PLAYER
 import com.maxrave.domain.mediaservice.handler.MediaPlayerHandler
 import com.maxrave.domain.mediaservice.handler.RepeatState
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.Platform
-import com.maxrave.simpmusic.expect.toggleMiniPlayer
-import com.maxrave.simpmusic.expect.ui.MediaPlayerView
-import com.maxrave.simpmusic.expect.ui.MediaPlayerViewWithSubtitle
-import com.maxrave.simpmusic.expect.ui.toImageBitmap
-import com.maxrave.simpmusic.extension.GradientAngle
-import com.maxrave.simpmusic.extension.GradientOffset
-import com.maxrave.simpmusic.extension.KeepScreenOn
-import com.maxrave.simpmusic.extension.formatDuration
-import com.maxrave.simpmusic.extension.getColorFromPalette
-import com.maxrave.simpmusic.extension.getScreenSizeInfo
-import com.maxrave.simpmusic.extension.hsvToColor
-import com.maxrave.simpmusic.extension.isElementVisible
-import com.maxrave.simpmusic.extension.parseTimestampToMilliseconds
-import com.maxrave.simpmusic.extension.rememberIsInPipMode
-import com.maxrave.simpmusic.getPlatform
-import com.maxrave.simpmusic.ui.component.AIBadge
-import com.maxrave.simpmusic.ui.component.AddToPlaylistModalBottomSheet
-import com.maxrave.simpmusic.ui.component.DescriptionView
-import com.maxrave.simpmusic.ui.component.ExplicitBadge
-import com.maxrave.simpmusic.ui.component.FullscreenLyricsSheet
-import com.maxrave.simpmusic.ui.component.HeartCheckBox
-import com.maxrave.simpmusic.ui.component.InfoPlayerBottomSheet
-import com.maxrave.simpmusic.ui.component.LyricsView
-import com.maxrave.simpmusic.ui.component.NowPlayingBottomSheet
-import com.maxrave.simpmusic.ui.component.PlayPauseButton
-import com.maxrave.simpmusic.ui.component.PlayerControlLayout
-import com.maxrave.simpmusic.ui.component.QueueBottomSheet
-import com.maxrave.simpmusic.ui.component.VoteLyricsDialog
-import com.maxrave.simpmusic.ui.navigation.destination.list.ArtistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.player.FullscreenDestination
-import com.maxrave.simpmusic.ui.theme.blackMoreOverlay
-import com.maxrave.simpmusic.ui.theme.md_theme_dark_background
-import com.maxrave.simpmusic.ui.theme.overlay
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.viewModel.LyricsProvider
-import com.maxrave.simpmusic.viewModel.NowPlayingBottomSheetUIEvent
-import com.maxrave.simpmusic.viewModel.NowPlayingBottomSheetViewModel
-import com.maxrave.simpmusic.viewModel.SharedViewModel
-import com.maxrave.simpmusic.viewModel.UIEvent
+import com.maxrave.windmusic.Platform
+import com.maxrave.windmusic.expect.toggleMiniPlayer
+import com.maxrave.windmusic.expect.ui.MediaPlayerView
+import com.maxrave.windmusic.expect.ui.MediaPlayerViewWithSubtitle
+import com.maxrave.windmusic.expect.ui.toImageBitmap
+import com.maxrave.windmusic.extension.GradientAngle
+import com.maxrave.windmusic.extension.GradientOffset
+import com.maxrave.windmusic.extension.KeepScreenOn
+import com.maxrave.windmusic.extension.formatDuration
+import com.maxrave.windmusic.extension.getColorFromPalette
+import com.maxrave.windmusic.extension.getScreenSizeInfo
+import com.maxrave.windmusic.extension.hsvToColor
+import com.maxrave.windmusic.extension.isElementVisible
+import com.maxrave.windmusic.extension.parseTimestampToMilliseconds
+import com.maxrave.windmusic.extension.rememberIsInPipMode
+import com.maxrave.windmusic.getPlatform
+import com.maxrave.windmusic.ui.component.AIBadge
+import com.maxrave.windmusic.ui.component.AddToPlaylistModalBottomSheet
+import com.maxrave.windmusic.ui.component.DescriptionView
+import com.maxrave.windmusic.ui.component.ExplicitBadge
+import com.maxrave.windmusic.ui.component.FullscreenLyricsSheet
+import com.maxrave.windmusic.ui.component.HeartCheckBox
+import com.maxrave.windmusic.ui.component.InfoPlayerBottomSheet
+import com.maxrave.windmusic.ui.component.LyricsView
+import com.maxrave.windmusic.ui.component.NowPlayingBottomSheet
+import com.maxrave.windmusic.ui.component.PlayPauseButton
+import com.maxrave.windmusic.ui.component.PlayerControlLayout
+import com.maxrave.windmusic.ui.component.QueueBottomSheet
+import com.maxrave.windmusic.ui.component.VoteLyricsDialog
+import com.maxrave.windmusic.ui.navigation.destination.list.ArtistDestination
+import com.maxrave.windmusic.ui.navigation.destination.player.FullscreenDestination
+import com.maxrave.windmusic.ui.theme.blackMoreOverlay
+import com.maxrave.windmusic.ui.theme.md_theme_dark_background
+import com.maxrave.windmusic.ui.theme.overlay
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.viewModel.LyricsProvider
+import com.maxrave.windmusic.viewModel.NowPlayingBottomSheetUIEvent
+import com.maxrave.windmusic.viewModel.NowPlayingBottomSheetViewModel
+import com.maxrave.windmusic.viewModel.SharedViewModel
+import com.maxrave.windmusic.viewModel.UIEvent
 import dev.chrisbanes.haze.hazeEffect
 import dev.chrisbanes.haze.hazeSource
 import dev.chrisbanes.haze.materials.CupertinoMaterials
@@ -189,31 +189,31 @@ import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.artists
-import simpmusic.composeapp.generated.resources.baseline_fullscreen_24
-import simpmusic.composeapp.generated.resources.baseline_more_vert_24
-import simpmusic.composeapp.generated.resources.baseline_playlist_add_24
-import simpmusic.composeapp.generated.resources.crossfading
-import simpmusic.composeapp.generated.resources.description
-import simpmusic.composeapp.generated.resources.holder
-import simpmusic.composeapp.generated.resources.holder_video
-import simpmusic.composeapp.generated.resources.like_and_dislike
-import simpmusic.composeapp.generated.resources.line_synced
-import simpmusic.composeapp.generated.resources.lyrics
-import simpmusic.composeapp.generated.resources.lyrics_provider_betterlyrics
-import simpmusic.composeapp.generated.resources.lyrics_provider_lrc
-import simpmusic.composeapp.generated.resources.lyrics_provider_simpmusic
-import simpmusic.composeapp.generated.resources.lyrics_provider_youtube
-import simpmusic.composeapp.generated.resources.now_playing_upper
-import simpmusic.composeapp.generated.resources.offline_mode
-import simpmusic.composeapp.generated.resources.published_at
-import simpmusic.composeapp.generated.resources.rate_lyrics
-import simpmusic.composeapp.generated.resources.rich_synced
-import simpmusic.composeapp.generated.resources.show
-import simpmusic.composeapp.generated.resources.spotify_lyrics_provider
-import simpmusic.composeapp.generated.resources.unsynced
-import simpmusic.composeapp.generated.resources.view_count
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.artists
+import windmusic.composeapp.generated.resources.baseline_fullscreen_24
+import windmusic.composeapp.generated.resources.baseline_more_vert_24
+import windmusic.composeapp.generated.resources.baseline_playlist_add_24
+import windmusic.composeapp.generated.resources.crossfading
+import windmusic.composeapp.generated.resources.description
+import windmusic.composeapp.generated.resources.holder
+import windmusic.composeapp.generated.resources.holder_video
+import windmusic.composeapp.generated.resources.like_and_dislike
+import windmusic.composeapp.generated.resources.line_synced
+import windmusic.composeapp.generated.resources.lyrics
+import windmusic.composeapp.generated.resources.lyrics_provider_betterlyrics
+import windmusic.composeapp.generated.resources.lyrics_provider_lrc
+import windmusic.composeapp.generated.resources.lyrics_provider_simpmusic
+import windmusic.composeapp.generated.resources.lyrics_provider_youtube
+import windmusic.composeapp.generated.resources.now_playing_upper
+import windmusic.composeapp.generated.resources.offline_mode
+import windmusic.composeapp.generated.resources.published_at
+import windmusic.composeapp.generated.resources.rate_lyrics
+import windmusic.composeapp.generated.resources.rich_synced
+import windmusic.composeapp.generated.resources.show
+import windmusic.composeapp.generated.resources.spotify_lyrics_provider
+import windmusic.composeapp.generated.resources.unsynced
+import windmusic.composeapp.generated.resources.view_count
 import kotlin.math.roundToLong
 
 private const val TAG = "NowPlayingScreen"
@@ -2148,7 +2148,7 @@ fun NowPlayingScreenContent(
                                             AIBadge()
                                         }
                                         Spacer(modifier = Modifier.weight(1f))
-                                        // Vote button - only show if lyrics or translated lyrics from SimpMusic
+                                        // Vote button - only show if lyrics or translated lyrics from WindMusic
                                         val canVoteLyrics =
                                             screenDataState.lyricsData?.lyricsProvider == LyricsProvider.SIMPMUSIC &&
                                                 screenDataState.lyricsData

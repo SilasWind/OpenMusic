@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -9,15 +9,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.window.DialogProperties
-import com.maxrave.simpmusic.ui.theme.typo
+import com.maxrave.windmusic.ui.theme.typo
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.blog_promo_message
-import simpmusic.composeapp.generated.resources.blog_promo_title
-import simpmusic.composeapp.generated.resources.later
-import simpmusic.composeapp.generated.resources.mono
-import simpmusic.composeapp.generated.resources.visit_blog
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.blog_promo_message
+import windmusic.composeapp.generated.resources.blog_promo_title
+import windmusic.composeapp.generated.resources.later
+import windmusic.composeapp.generated.resources.mono
+import windmusic.composeapp.generated.resources.visit_blog
 
 @Composable
 @ExperimentalMaterial3Api

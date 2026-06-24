@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.viewModel
+package com.maxrave.windmusic.viewModel
 
 import androidx.lifecycle.viewModelScope
 import com.maxrave.common.SELECTED_LANGUAGE
@@ -15,7 +15,7 @@ import com.maxrave.domain.utils.Resource
 import com.maxrave.domain.utils.toQueryList
 import com.maxrave.logger.LogLevel
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.viewModel.base.BaseViewModel
+import com.maxrave.windmusic.viewModel.base.BaseViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -26,15 +26,15 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import org.jetbrains.compose.resources.StringResource
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.albums
-import simpmusic.composeapp.generated.resources.all
-import simpmusic.composeapp.generated.resources.artists
-import simpmusic.composeapp.generated.resources.featured_playlists
-import simpmusic.composeapp.generated.resources.playlists
-import simpmusic.composeapp.generated.resources.podcasts
-import simpmusic.composeapp.generated.resources.songs
-import simpmusic.composeapp.generated.resources.videos
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.albums
+import windmusic.composeapp.generated.resources.all
+import windmusic.composeapp.generated.resources.artists
+import windmusic.composeapp.generated.resources.featured_playlists
+import windmusic.composeapp.generated.resources.playlists
+import windmusic.composeapp.generated.resources.podcasts
+import windmusic.composeapp.generated.resources.songs
+import windmusic.composeapp.generated.resources.videos
 
 // State cho tìm kiếm
 data class SearchScreenState(

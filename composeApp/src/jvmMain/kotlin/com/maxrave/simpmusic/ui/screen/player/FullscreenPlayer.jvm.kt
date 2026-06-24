@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.screen.player
+package com.maxrave.windmusic.ui.screen.player
 
 import androidx.compose.runtime.Composable
 

@@ -1,15 +1,15 @@
-package com.maxrave.simpmusic
+package com.maxrave.windmusic
 
 import com.maxrave.logger.Logger
 
 /**
- * Registers the "simpmusic://" custom URI protocol handler in Windows Registry
+ * Registers the "windmusic://" custom URI protocol handler in Windows Registry
  * under HKEY_CURRENT_USER (no admin rights required).
  *
  * Registry structure:
  * ```
- * HKCU\Software\Classes\simpmusic
- *     (Default) = "URL:SimpMusic Protocol"
+ * HKCU\Software\Classes\windmusic
+ *     (Default) = "URL:WindMusic Protocol"
  *     URL Protocol = ""
  *     \DefaultIcon
  *         (Default) = "\"<exe_path>\",0"
@@ -19,7 +19,7 @@ import com.maxrave.logger.Logger
  */
 object WindowsProtocolRegistrar {
     private const val TAG = "WindowsProtocolRegistrar"
-    private const val SCHEME = "simpmusic"
+    private const val SCHEME = "windmusic"
     private const val REG_KEY = "HKCU\\Software\\Classes\\$SCHEME"
 
     fun register() {
@@ -36,10 +36,10 @@ object WindowsProtocolRegistrar {
                 return
             }
 
-            Logger.d(TAG, "Registering simpmusic:// protocol handler -> $exePath")
+            Logger.d(TAG, "Registering windmusic:// protocol handler -> $exePath")
 
             // Main key with protocol description
-            regAdd(REG_KEY, null, "URL:SimpMusic Protocol")
+            regAdd(REG_KEY, null, "URL:WindMusic Protocol")
             regAdd(REG_KEY, "URL Protocol", "")
 
             // DefaultIcon
@@ -57,7 +57,7 @@ object WindowsProtocolRegistrar {
     private fun isAlreadyRegistered(currentExePath: String): Boolean {
         return try {
             val result = regQuery("$REG_KEY\\shell\\open\\command", null)
-            // Registry stores path with quotes: "C:\path\to\SimpMusic.exe" "%1"
+            // Registry stores path with quotes: "C:\path\to\WindMusic.exe" "%1"
             // Normalize both for comparison
             val normalizedExe = currentExePath.replace("\\", "/").lowercase()
             result?.replace("\\", "/")?.lowercase()?.contains(normalizedExe) == true
@@ -69,8 +69,8 @@ object WindowsProtocolRegistrar {
     private fun resolveExePath(): String? {
         // JPackage directory structure:
         //   <app>/runtime/...  (java.home points here)
-        //   <app>/SimpMusic.exe
-        // So we go: java.home → parent (runtime) → parent (app) → SimpMusic.exe
+        //   <app>/WindMusic.exe
+        // So we go: java.home → parent (runtime) → parent (app) → WindMusic.exe
         val javaHome = System.getProperty("java.home") ?: return null
         val javaHomeDir = java.io.File(javaHome)
 
@@ -85,7 +85,7 @@ object WindowsProtocolRegistrar {
         }
 
         if (appDir != null) {
-            val exeFile = java.io.File(appDir, "SimpMusic.exe")
+            val exeFile = java.io.File(appDir, "WindMusic.exe")
             if (exeFile.exists()) {
                 return exeFile.absolutePath
             }

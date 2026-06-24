@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.MarqueeAnimationMode
@@ -54,27 +54,27 @@ import com.maxrave.domain.data.type.RecentlyType
 import com.maxrave.domain.mediaservice.handler.QueueData
 import com.maxrave.domain.utils.connectArtists
 import com.maxrave.domain.utils.toTrack
-import com.maxrave.simpmusic.ui.navigation.destination.list.AlbumDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.ArtistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.LocalPlaylistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.PlaylistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.PodcastDestination
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.viewModel.LibraryViewModel
-import com.maxrave.simpmusic.viewModel.SharedViewModel
+import com.maxrave.windmusic.ui.navigation.destination.list.AlbumDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.ArtistDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.LocalPlaylistDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.PlaylistDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.PodcastDestination
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.viewModel.LibraryViewModel
+import com.maxrave.windmusic.viewModel.SharedViewModel
 import kotlinx.coroutines.runBlocking
 import org.jetbrains.compose.resources.getString
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.holder
-import simpmusic.composeapp.generated.resources.most_played
-import simpmusic.composeapp.generated.resources.no_favorite_playlists
-import simpmusic.composeapp.generated.resources.no_playlists_downloaded
-import simpmusic.composeapp.generated.resources.radio
-import simpmusic.composeapp.generated.resources.recently_added
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.holder
+import windmusic.composeapp.generated.resources.most_played
+import windmusic.composeapp.generated.resources.no_favorite_playlists
+import windmusic.composeapp.generated.resources.no_playlists_downloaded
+import windmusic.composeapp.generated.resources.radio
+import windmusic.composeapp.generated.resources.recently_added
 import com.maxrave.domain.mediaservice.handler.PlaylistType as DomainPlaylistType
 
 @OptIn(ExperimentalMaterial3Api::class)

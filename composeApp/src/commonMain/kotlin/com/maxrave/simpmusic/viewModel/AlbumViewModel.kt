@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.viewModel
+package com.maxrave.windmusic.viewModel
 
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.viewModelScope
@@ -18,8 +18,8 @@ import com.maxrave.domain.utils.toAlbumEntity
 import com.maxrave.domain.utils.toArrayListTrack
 import com.maxrave.domain.utils.toSongEntity
 import com.maxrave.logger.LogLevel
-import com.maxrave.simpmusic.ui.theme.md_theme_dark_background
-import com.maxrave.simpmusic.viewModel.base.BaseViewModel
+import com.maxrave.windmusic.ui.theme.md_theme_dark_background
+import com.maxrave.windmusic.viewModel.base.BaseViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -29,11 +29,11 @@ import kotlinx.coroutines.flow.singleOrNull
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.koin.core.component.inject
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.album
-import simpmusic.composeapp.generated.resources.downloaded
-import simpmusic.composeapp.generated.resources.error
-import simpmusic.composeapp.generated.resources.playlist_is_empty
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.album
+import windmusic.composeapp.generated.resources.downloaded
+import windmusic.composeapp.generated.resources.error
+import windmusic.composeapp.generated.resources.playlist_is_empty
 
 class AlbumViewModel(
     private val songRepository: SongRepository,

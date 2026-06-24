@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.Crossfade
@@ -79,28 +79,28 @@ import com.maxrave.domain.utils.toListName
 import com.maxrave.domain.utils.toSongEntity
 import com.maxrave.domain.utils.toTrack
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.Platform
-import com.maxrave.simpmusic.expect.ui.HorizontalScrollBar
-import com.maxrave.simpmusic.extension.generateRandomColor
-import com.maxrave.simpmusic.getPlatform
-import com.maxrave.simpmusic.ui.navigation.destination.list.AlbumDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.ArtistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.PlaylistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.PodcastDestination
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.viewModel.HomeViewModel
+import com.maxrave.windmusic.Platform
+import com.maxrave.windmusic.expect.ui.HorizontalScrollBar
+import com.maxrave.windmusic.extension.generateRandomColor
+import com.maxrave.windmusic.getPlatform
+import com.maxrave.windmusic.ui.navigation.destination.list.AlbumDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.ArtistDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.PlaylistDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.PodcastDestination
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.viewModel.HomeViewModel
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.album
-import simpmusic.composeapp.generated.resources.app_name
-import simpmusic.composeapp.generated.resources.description
-import simpmusic.composeapp.generated.resources.holder
-import simpmusic.composeapp.generated.resources.holder_video
-import simpmusic.composeapp.generated.resources.playlist
-import simpmusic.composeapp.generated.resources.subscribers
-import simpmusic.composeapp.generated.resources.you
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.album
+import windmusic.composeapp.generated.resources.app_name
+import windmusic.composeapp.generated.resources.description
+import windmusic.composeapp.generated.resources.holder
+import windmusic.composeapp.generated.resources.holder_video
+import windmusic.composeapp.generated.resources.playlist
+import windmusic.composeapp.generated.resources.subscribers
+import windmusic.composeapp.generated.resources.you
 
 @Composable
 fun HomeItem(

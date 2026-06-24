@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.MarqueeAnimationMode
@@ -28,11 +28,11 @@ import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import com.maxrave.domain.data.model.podcast.PodcastBrowse
-import com.maxrave.simpmusic.ui.theme.typo
+import com.maxrave.windmusic.ui.theme.typo
 import org.jetbrains.compose.resources.painterResource
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.baseline_more_vert_24
-import simpmusic.composeapp.generated.resources.holder
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.baseline_more_vert_24
+import windmusic.composeapp.generated.resources.holder
 
 @Composable
 fun PodcastEpisodeFullWidthItem(

@@ -1,7 +1,7 @@
-package com.maxrave.simpmusic.expect
+package com.maxrave.windmusic.expect
 
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.ui.mini_player.MiniPlayerManager
+import com.maxrave.windmusic.ui.mini_player.MiniPlayerManager
 
 actual fun toggleMiniPlayer() {
     Logger.d("MiniPlayer", "Toggle called, current state: ${MiniPlayerManager.isOpen}")

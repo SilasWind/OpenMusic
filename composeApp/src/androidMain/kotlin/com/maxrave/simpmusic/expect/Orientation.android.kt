@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.expect
+package com.maxrave.windmusic.expect
 
 import android.content.Context
 import android.content.res.Configuration

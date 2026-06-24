@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.service.test.notification
+package com.maxrave.windmusic.service.test.notification
 
 import android.content.Context
 import androidx.work.CoroutineWorker
@@ -12,8 +12,8 @@ import com.maxrave.domain.repository.AlbumRepository
 import com.maxrave.domain.repository.ArtistRepository
 import com.maxrave.domain.repository.CommonRepository
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.extension.symmetricDifference
-import com.maxrave.simpmusic.viewModel.MoreAlbumsViewModel
+import com.maxrave.windmusic.extension.symmetricDifference
+import com.maxrave.windmusic.viewModel.MoreAlbumsViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first

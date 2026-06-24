@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.screen.other
+package com.maxrave.windmusic.ui.screen.other
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.MarqueeAnimationMode
@@ -31,23 +31,23 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.ui.component.CenterLoadingBox
-import com.maxrave.simpmusic.ui.component.EndOfPage
-import com.maxrave.simpmusic.ui.component.HomeItemContentPlaylist
-import com.maxrave.simpmusic.ui.component.RippleIconButton
-import com.maxrave.simpmusic.ui.navigation.destination.list.AlbumDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.MoreAlbumsDestination
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.viewModel.MoreAlbumsUIState
-import com.maxrave.simpmusic.viewModel.MoreAlbumsViewModel
+import com.maxrave.windmusic.ui.component.CenterLoadingBox
+import com.maxrave.windmusic.ui.component.EndOfPage
+import com.maxrave.windmusic.ui.component.HomeItemContentPlaylist
+import com.maxrave.windmusic.ui.component.RippleIconButton
+import com.maxrave.windmusic.ui.navigation.destination.list.AlbumDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.MoreAlbumsDestination
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.viewModel.MoreAlbumsUIState
+import com.maxrave.windmusic.viewModel.MoreAlbumsViewModel
 import dev.chrisbanes.haze.hazeEffect
 import dev.chrisbanes.haze.hazeSource
 import dev.chrisbanes.haze.materials.ExperimentalHazeMaterialsApi
 import dev.chrisbanes.haze.materials.HazeMaterials
 import dev.chrisbanes.haze.rememberHazeState
 import org.koin.compose.viewmodel.koinViewModel
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalHazeMaterialsApi::class)
 @Composable

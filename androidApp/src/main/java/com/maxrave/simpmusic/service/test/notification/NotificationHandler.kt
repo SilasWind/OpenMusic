@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.service.test.notification
+package com.maxrave.windmusic.service.test.notification
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -18,9 +18,9 @@ import coil3.request.ImageRequest
 import coil3.request.SuccessResult
 import coil3.request.allowHardware
 import coil3.toBitmap
-import com.maxrave.simpmusic.MainActivity
-import com.maxrave.simpmusic.R
-import com.maxrave.simpmusic.utils.ComposeResUtils
+import com.maxrave.windmusic.MainActivity
+import com.maxrave.windmusic.R
+import com.maxrave.windmusic.utils.ComposeResUtils
 import kotlinx.coroutines.runBlocking
 
 object NotificationHandler {
@@ -33,7 +33,7 @@ object NotificationHandler {
         //  No back-stack when launched
         val action = Intent(context, MainActivity::class.java)
         action.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP
-        action.data = "simpmusic://notification".toUri()
+        action.data = "windmusic://notification".toUri()
         val pendingIntent =
             PendingIntent.getActivity(
                 context,

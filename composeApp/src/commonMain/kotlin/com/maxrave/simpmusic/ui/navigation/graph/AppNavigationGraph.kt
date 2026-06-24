@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.navigation.graph
+package com.maxrave.windmusic.ui.navigation.graph
 
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -11,14 +11,14 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.maxrave.simpmusic.ui.navigation.destination.home.HomeDestination
-import com.maxrave.simpmusic.ui.navigation.destination.library.LibraryDestination
-import com.maxrave.simpmusic.ui.navigation.destination.player.FullscreenDestination
-import com.maxrave.simpmusic.ui.navigation.destination.search.SearchDestination
-import com.maxrave.simpmusic.ui.screen.home.HomeScreen
-import com.maxrave.simpmusic.ui.screen.library.LibraryScreen
-import com.maxrave.simpmusic.ui.screen.other.SearchScreen
-import com.maxrave.simpmusic.ui.screen.player.FullscreenPlayer
+import com.maxrave.windmusic.ui.navigation.destination.home.HomeDestination
+import com.maxrave.windmusic.ui.navigation.destination.library.LibraryDestination
+import com.maxrave.windmusic.ui.navigation.destination.player.FullscreenDestination
+import com.maxrave.windmusic.ui.navigation.destination.search.SearchDestination
+import com.maxrave.windmusic.ui.screen.home.HomeScreen
+import com.maxrave.windmusic.ui.screen.library.LibraryScreen
+import com.maxrave.windmusic.ui.screen.other.SearchScreen
+import com.maxrave.windmusic.ui.screen.player.FullscreenPlayer
 
 @Composable
 @ExperimentalMaterial3Api

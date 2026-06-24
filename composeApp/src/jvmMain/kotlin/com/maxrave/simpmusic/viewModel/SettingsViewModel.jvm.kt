@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.viewModel
+package com.maxrave.windmusic.viewModel
 
 import com.eygraber.uri.Uri
 import com.maxrave.common.DB_NAME
@@ -7,7 +7,7 @@ import com.maxrave.data.io.getHomeFolderPath
 import com.maxrave.domain.repository.CacheRepository
 import com.maxrave.domain.repository.CommonRepository
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.extension.zipOutputStream
+import com.maxrave.windmusic.extension.zipOutputStream
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.runBlocking
@@ -15,8 +15,8 @@ import kotlinx.coroutines.withContext
 import multiplatform.network.cmptoast.ToastGravity
 import multiplatform.network.cmptoast.showToast
 import org.jetbrains.compose.resources.getString
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.restore_success
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.restore_success
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -46,7 +46,7 @@ actual suspend fun restoreNative(
             Logger.d("BackupRestore", "Processing entry: ${entry.name}")
             when {
                 entry.name == "$SETTINGS_FILENAME.preferences_pb" -> {
-                    File(getHomeFolderPath(listOf(".simpmusic")), "$SETTINGS_FILENAME.preferences_pb")
+                    File(getHomeFolderPath(listOf(".windmusic")), "$SETTINGS_FILENAME.preferences_pb")
                         .outputStream()
                         .use { outputStream ->
                             inputStream.copyTo(outputStream)
@@ -83,7 +83,7 @@ actual suspend fun backupNative(
         FileOutputStream(File(uri.toString()))
     ).use {
         it.buffered().zipOutputStream().use { outputStream ->
-            File(getHomeFolderPath(listOf(".simpmusic")), "$SETTINGS_FILENAME.preferences_pb")
+            File(getHomeFolderPath(listOf(".windmusic")), "$SETTINGS_FILENAME.preferences_pb")
                 .inputStream()
                 .buffered()
                 .use { inputStream ->

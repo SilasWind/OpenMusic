@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import android.os.SystemClock
 import androidx.compose.animation.core.Animatable
@@ -50,10 +50,10 @@ import com.kyant.backdrop.effects.vibrancy
 import com.kyant.backdrop.highlight.Highlight
 import com.kyant.backdrop.shadow.InnerShadow
 import com.kyant.backdrop.shadow.Shadow
-import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
-import com.maxrave.simpmusic.ui.theme.bottomBarSeedDark
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.ui.theme.white
+import com.maxrave.windmusic.expect.ui.PlatformBackdrop
+import com.maxrave.windmusic.ui.theme.bottomBarSeedDark
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.ui.theme.white
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.drop
@@ -80,7 +80,7 @@ private val BlobHeight = 56.dp
  *  3. crisp **icons + labels** on top (so the active label stays sharp, unlike when
  *     the blob is drawn over it).
  *
- * Adapted from Kyant's `LiquidBottomTabs`/`DampedDragAnimation` to SimpMusic's
+ * Adapted from Kyant's `LiquidBottomTabs`/`DampedDragAnimation` to WindMusic's
  * [BottomNavScreen]s, fixed tab width (to fit the existing ConstraintLayout) and the
  * bottom bar's luminance sampling.
  *

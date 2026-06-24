@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -23,17 +23,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.maxrave.simpmusic.extension.NonLazyGrid
-import com.maxrave.simpmusic.ui.navigation.destination.library.LibraryDynamicPlaylistDestination
-import com.maxrave.simpmusic.ui.screen.library.LibraryDynamicPlaylistType
-import com.maxrave.simpmusic.ui.theme.typo
+import com.maxrave.windmusic.extension.NonLazyGrid
+import com.maxrave.windmusic.ui.navigation.destination.library.LibraryDynamicPlaylistDestination
+import com.maxrave.windmusic.ui.screen.library.LibraryDynamicPlaylistType
+import com.maxrave.windmusic.ui.theme.typo
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.downloaded
-import simpmusic.composeapp.generated.resources.favorite
-import simpmusic.composeapp.generated.resources.followed
-import simpmusic.composeapp.generated.resources.most_played
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.downloaded
+import windmusic.composeapp.generated.resources.favorite
+import windmusic.composeapp.generated.resources.followed
+import windmusic.composeapp.generated.resources.most_played
 
 @Composable
 fun LibraryTilingBox(navController: NavController) {

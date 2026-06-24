@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.MarqueeAnimationMode
@@ -50,19 +50,19 @@ import com.maxrave.domain.data.type.ChartItem
 import com.maxrave.domain.data.type.PlaylistType
 import com.maxrave.domain.utils.LocalResource
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.extension.angledGradientBackground
-import com.maxrave.simpmusic.extension.isScrollingUp
-import com.maxrave.simpmusic.ui.navigation.destination.list.AlbumDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.LocalPlaylistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.PlaylistDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.PodcastDestination
-import com.maxrave.simpmusic.ui.theme.seed
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.ui.theme.white
+import com.maxrave.windmusic.extension.angledGradientBackground
+import com.maxrave.windmusic.extension.isScrollingUp
+import com.maxrave.windmusic.ui.navigation.destination.list.AlbumDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.LocalPlaylistDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.PlaylistDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.PodcastDestination
+import com.maxrave.windmusic.ui.theme.seed
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.ui.theme.white
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.create
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.create
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

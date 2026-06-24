@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.extension
+package com.maxrave.windmusic.extension
 
 import androidx.compose.animation.core.LinearOutSlowInEasing
 import androidx.compose.animation.core.animateFloat
@@ -59,10 +59,10 @@ import androidx.compose.ui.unit.IntSize
 import com.kmpalette.palette.graphics.Palette
 import com.maxrave.domain.data.model.ui.ScreenSizeInfo
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.getPlatform
-import com.maxrave.simpmusic.ui.theme.md_theme_dark_background
-import com.maxrave.simpmusic.ui.theme.shimmerBackground
-import com.maxrave.simpmusic.ui.theme.shimmerLine
+import com.maxrave.windmusic.getPlatform
+import com.maxrave.windmusic.ui.theme.md_theme_dark_background
+import com.maxrave.windmusic.ui.theme.shimmerBackground
+import com.maxrave.windmusic.ui.theme.shimmerLine
 import kotlinx.coroutines.runBlocking
 import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.getString

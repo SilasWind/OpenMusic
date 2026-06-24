@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.extension
+package com.maxrave.windmusic.extension
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalDensity

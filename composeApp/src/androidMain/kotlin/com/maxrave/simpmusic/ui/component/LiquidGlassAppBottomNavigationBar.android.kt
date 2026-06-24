@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.component
+package com.maxrave.windmusic.ui.component
 
 import android.graphics.Bitmap
 import androidx.compose.animation.core.Animatable
@@ -45,12 +45,12 @@ import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.compose.currentBackStackEntryAsState
 import com.maxrave.domain.data.player.GenericMediaItem
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.expect.ui.PlatformBackdrop
-import com.maxrave.simpmusic.ui.navigation.destination.home.HomeDestination
-import com.maxrave.simpmusic.ui.navigation.destination.library.LibraryDestination
-import com.maxrave.simpmusic.ui.navigation.destination.search.SearchDestination
-import com.maxrave.simpmusic.ui.screen.MiniPlayer
-import com.maxrave.simpmusic.viewModel.SharedViewModel
+import com.maxrave.windmusic.expect.ui.PlatformBackdrop
+import com.maxrave.windmusic.ui.navigation.destination.home.HomeDestination
+import com.maxrave.windmusic.ui.navigation.destination.library.LibraryDestination
+import com.maxrave.windmusic.ui.navigation.destination.search.SearchDestination
+import com.maxrave.windmusic.ui.screen.MiniPlayer
+import com.maxrave.windmusic.viewModel.SharedViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive

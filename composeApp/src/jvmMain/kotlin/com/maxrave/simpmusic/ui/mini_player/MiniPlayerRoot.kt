@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.mini_player
+package com.maxrave.windmusic.ui.mini_player
 
 import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.layout.Box
@@ -30,7 +30,7 @@ import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.WindowState
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.maxrave.simpmusic.viewModel.SharedViewModel
+import com.maxrave.windmusic.viewModel.SharedViewModel
 import java.awt.Cursor
 import java.awt.MouseInfo
 

@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.screen.home
+package com.maxrave.windmusic.ui.screen.home
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.MarqueeAnimationMode
@@ -41,25 +41,25 @@ import coil3.request.CachePolicy
 import coil3.request.ImageRequest
 import coil3.request.crossfade
 import com.maxrave.domain.data.entities.NotificationEntity
-import com.maxrave.simpmusic.extension.formatTimeAgo
-import com.maxrave.simpmusic.ui.component.CenterLoadingBox
-import com.maxrave.simpmusic.ui.component.EndOfPage
-import com.maxrave.simpmusic.ui.component.RippleIconButton
-import com.maxrave.simpmusic.ui.navigation.destination.list.AlbumDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.ArtistDestination
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.viewModel.NotificationViewModel
+import com.maxrave.windmusic.extension.formatTimeAgo
+import com.maxrave.windmusic.ui.component.CenterLoadingBox
+import com.maxrave.windmusic.ui.component.EndOfPage
+import com.maxrave.windmusic.ui.component.RippleIconButton
+import com.maxrave.windmusic.ui.navigation.destination.list.AlbumDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.ArtistDestination
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.viewModel.NotificationViewModel
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.album
-import simpmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
-import simpmusic.composeapp.generated.resources.holder
-import simpmusic.composeapp.generated.resources.new_release
-import simpmusic.composeapp.generated.resources.no_notification
-import simpmusic.composeapp.generated.resources.notification
-import simpmusic.composeapp.generated.resources.singles
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.album
+import windmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
+import windmusic.composeapp.generated.resources.holder
+import windmusic.composeapp.generated.resources.new_release
+import windmusic.composeapp.generated.resources.no_notification
+import windmusic.composeapp.generated.resources.notification
+import windmusic.composeapp.generated.resources.singles
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

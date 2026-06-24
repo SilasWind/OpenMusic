@@ -1,6 +1,6 @@
 @file:Suppress("ktlint:standard:no-wildcard-imports")
 
-package com.maxrave.simpmusic.viewModel
+package com.maxrave.windmusic.viewModel
 
 import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.viewModelScope
@@ -26,10 +26,10 @@ import com.maxrave.domain.utils.toPlaylistEntity
 import com.maxrave.domain.utils.toSongEntity
 import com.maxrave.domain.utils.toTrack
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.viewModel.PlaylistUIState.Error
-import com.maxrave.simpmusic.viewModel.PlaylistUIState.Loading
-import com.maxrave.simpmusic.viewModel.PlaylistUIState.Success
-import com.maxrave.simpmusic.viewModel.base.BaseViewModel
+import com.maxrave.windmusic.viewModel.PlaylistUIState.Error
+import com.maxrave.windmusic.viewModel.PlaylistUIState.Loading
+import com.maxrave.windmusic.viewModel.PlaylistUIState.Success
+import com.maxrave.windmusic.viewModel.base.BaseViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -44,19 +44,19 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import org.koin.core.component.inject
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.auto_created_by_youtube_music
-import simpmusic.composeapp.generated.resources.downloading
-import simpmusic.composeapp.generated.resources.error
-import simpmusic.composeapp.generated.resources.playlist
-import simpmusic.composeapp.generated.resources.playlist_is_empty
-import simpmusic.composeapp.generated.resources.radio
-import simpmusic.composeapp.generated.resources.radio_not_available
-import simpmusic.composeapp.generated.resources.shuffle
-import simpmusic.composeapp.generated.resources.shuffle_not_available
-import simpmusic.composeapp.generated.resources.synced
-import simpmusic.composeapp.generated.resources.syncing
-import simpmusic.composeapp.generated.resources.view_count
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.auto_created_by_youtube_music
+import windmusic.composeapp.generated.resources.downloading
+import windmusic.composeapp.generated.resources.error
+import windmusic.composeapp.generated.resources.playlist
+import windmusic.composeapp.generated.resources.playlist_is_empty
+import windmusic.composeapp.generated.resources.radio
+import windmusic.composeapp.generated.resources.radio_not_available
+import windmusic.composeapp.generated.resources.shuffle
+import windmusic.composeapp.generated.resources.shuffle_not_available
+import windmusic.composeapp.generated.resources.synced
+import windmusic.composeapp.generated.resources.syncing
+import windmusic.composeapp.generated.resources.view_count
 
 class PlaylistViewModel(
     private val songRepository: SongRepository,

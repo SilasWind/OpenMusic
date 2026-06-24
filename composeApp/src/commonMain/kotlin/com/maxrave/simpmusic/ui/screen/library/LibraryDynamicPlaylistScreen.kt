@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.screen.library
+package com.maxrave.windmusic.ui.screen.library
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.layout.Arrangement
@@ -49,19 +49,19 @@ import com.maxrave.domain.utils.LocalResource
 import com.maxrave.domain.utils.toArrayListTrack
 import com.maxrave.domain.utils.toTrack
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.extension.getStringBlocking
-import com.maxrave.simpmusic.ui.component.ArtistFullWidthItems
-import com.maxrave.simpmusic.ui.component.EndOfPage
-import com.maxrave.simpmusic.ui.component.NowPlayingBottomSheet
-import com.maxrave.simpmusic.ui.component.PlaylistFullWidthItems
-import com.maxrave.simpmusic.ui.component.RippleIconButton
-import com.maxrave.simpmusic.ui.component.SongFullWidthItems
-import com.maxrave.simpmusic.ui.navigation.destination.list.AlbumDestination
-import com.maxrave.simpmusic.ui.navigation.destination.list.ArtistDestination
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.viewModel.AnalyticsViewModel
-import com.maxrave.simpmusic.viewModel.LibraryDynamicPlaylistViewModel
-import com.maxrave.simpmusic.viewModel.SharedViewModel
+import com.maxrave.windmusic.extension.getStringBlocking
+import com.maxrave.windmusic.ui.component.ArtistFullWidthItems
+import com.maxrave.windmusic.ui.component.EndOfPage
+import com.maxrave.windmusic.ui.component.NowPlayingBottomSheet
+import com.maxrave.windmusic.ui.component.PlaylistFullWidthItems
+import com.maxrave.windmusic.ui.component.RippleIconButton
+import com.maxrave.windmusic.ui.component.SongFullWidthItems
+import com.maxrave.windmusic.ui.navigation.destination.list.AlbumDestination
+import com.maxrave.windmusic.ui.navigation.destination.list.ArtistDestination
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.viewModel.AnalyticsViewModel
+import com.maxrave.windmusic.viewModel.LibraryDynamicPlaylistViewModel
+import com.maxrave.windmusic.viewModel.SharedViewModel
 import dev.chrisbanes.haze.hazeEffect
 import dev.chrisbanes.haze.hazeSource
 import dev.chrisbanes.haze.materials.ExperimentalHazeMaterialsApi
@@ -71,22 +71,22 @@ import org.jetbrains.compose.resources.StringResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.koinInject
 import org.koin.compose.viewmodel.koinViewModel
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
-import simpmusic.composeapp.generated.resources.baseline_close_24
-import simpmusic.composeapp.generated.resources.baseline_play_circle_24
-import simpmusic.composeapp.generated.resources.baseline_search_24
-import simpmusic.composeapp.generated.resources.baseline_shuffle_24
-import simpmusic.composeapp.generated.resources.downloaded
-import simpmusic.composeapp.generated.resources.favorite
-import simpmusic.composeapp.generated.resources.followed
-import simpmusic.composeapp.generated.resources.lower_plays
-import simpmusic.composeapp.generated.resources.most_played
-import simpmusic.composeapp.generated.resources.search
-import simpmusic.composeapp.generated.resources.seconds
-import simpmusic.composeapp.generated.resources.your_top_albums
-import simpmusic.composeapp.generated.resources.your_top_artists
-import simpmusic.composeapp.generated.resources.your_top_tracks
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
+import windmusic.composeapp.generated.resources.baseline_close_24
+import windmusic.composeapp.generated.resources.baseline_play_circle_24
+import windmusic.composeapp.generated.resources.baseline_search_24
+import windmusic.composeapp.generated.resources.baseline_shuffle_24
+import windmusic.composeapp.generated.resources.downloaded
+import windmusic.composeapp.generated.resources.favorite
+import windmusic.composeapp.generated.resources.followed
+import windmusic.composeapp.generated.resources.lower_plays
+import windmusic.composeapp.generated.resources.most_played
+import windmusic.composeapp.generated.resources.search
+import windmusic.composeapp.generated.resources.seconds
+import windmusic.composeapp.generated.resources.your_top_albums
+import windmusic.composeapp.generated.resources.your_top_artists
+import windmusic.composeapp.generated.resources.your_top_tracks
 
 @OptIn(ExperimentalHazeMaterialsApi::class)
 @Composable

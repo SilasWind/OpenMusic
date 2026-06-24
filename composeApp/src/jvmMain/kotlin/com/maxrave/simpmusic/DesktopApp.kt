@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic
+package com.maxrave.windmusic
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -29,13 +29,13 @@ import com.maxrave.data.di.loader.loadAllModules
 import com.maxrave.domain.manager.DataStoreManager
 import com.maxrave.domain.mediaservice.handler.MediaPlayerHandler
 import com.maxrave.domain.mediaservice.handler.ToastType
-import com.maxrave.simpmusic.di.viewModelModule
-import com.maxrave.simpmusic.ui.component.CustomTitleBar
-import com.maxrave.simpmusic.ui.mini_player.MiniPlayerManager
-import com.maxrave.simpmusic.ui.mini_player.MiniPlayerWindow
-import com.maxrave.simpmusic.utils.VersionManager
-import com.maxrave.simpmusic.viewModel.SharedViewModel
-import com.maxrave.simpmusic.viewModel.changeLanguageNative
+import com.maxrave.windmusic.di.viewModelModule
+import com.maxrave.windmusic.ui.component.CustomTitleBar
+import com.maxrave.windmusic.ui.mini_player.MiniPlayerManager
+import com.maxrave.windmusic.ui.mini_player.MiniPlayerWindow
+import com.maxrave.windmusic.utils.VersionManager
+import com.maxrave.windmusic.viewModel.SharedViewModel
+import com.maxrave.windmusic.viewModel.changeLanguageNative
 import io.sentry.Sentry
 import io.sentry.SentryLevel
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -54,15 +54,15 @@ import org.koin.core.context.loadKoinModules
 import org.koin.core.context.startKoin
 import org.koin.java.KoinJavaComponent.inject
 import org.koin.mp.KoinPlatform.getKoin
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.app_name
-import simpmusic.composeapp.generated.resources.circle_app_icon
-import simpmusic.composeapp.generated.resources.close_miniplayer
-import simpmusic.composeapp.generated.resources.explicit_content_blocked
-import simpmusic.composeapp.generated.resources.open_app
-import simpmusic.composeapp.generated.resources.open_miniplayer
-import simpmusic.composeapp.generated.resources.quit_app
-import simpmusic.composeapp.generated.resources.time_out_check_internet_connection_or_change_piped_instance_in_settings
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.app_name
+import windmusic.composeapp.generated.resources.circle_app_icon
+import windmusic.composeapp.generated.resources.close_miniplayer
+import windmusic.composeapp.generated.resources.explicit_content_blocked
+import windmusic.composeapp.generated.resources.open_app
+import windmusic.composeapp.generated.resources.open_miniplayer
+import windmusic.composeapp.generated.resources.quit_app
+import windmusic.composeapp.generated.resources.time_out_check_internet_connection_or_change_piped_instance_in_settings
 
 @OptIn(ExperimentalMaterial3Api::class)
 fun runDesktopApp(args: Array<String> = emptyArray()) {
@@ -90,11 +90,11 @@ fun runDesktopApp(args: Array<String> = emptyArray()) {
     // Note: macOS does NOT pass URI as args — it uses Apple Events via setOpenURIHandler
     val deepLinkArg =
         args.firstOrNull()?.takeIf { arg ->
-            arg.startsWith("simpmusic://") || arg.startsWith("http://") || arg.startsWith("https://")
+            arg.startsWith("windmusic://") || arg.startsWith("http://") || arg.startsWith("https://")
         }
     // Single-instance guard — MUST run before startKoin. The DataStore Koin
     // singleton is `createdAtStart`, so a second Windows instance would touch
-    // ~/.simpmusic/settings.preferences_pb and crash with an "Unable to rename
+    // ~/.windmusic/settings.preferences_pb and crash with an "Unable to rename
     // ...tmp" IOException (#2044) before it ever reached the old in-Compose check.
     // Bail out here, before Koin/DataStore initialize.
     val isSingleInstance =
@@ -133,7 +133,7 @@ fun runDesktopApp(args: Array<String> = emptyArray()) {
     if (BuildKonfig.sentryDsn.isNotEmpty()) {
         Sentry.init { options ->
             options.dsn = BuildKonfig.sentryDsn
-            options.release = "simpmusic-desktop@${VersionManager.getVersionName()}"
+            options.release = "windmusic-desktop@${VersionManager.getVersionName()}"
             options.setDiagnosticLevel(SentryLevel.ERROR)
         }
     }
@@ -158,7 +158,7 @@ fun runDesktopApp(args: Array<String> = emptyArray()) {
         }
     }
 
-    // Register simpmusic:// protocol handler on Windows (HKCU, no admin needed)
+    // Register windmusic:// protocol handler on Windows (HKCU, no admin needed)
     WindowsProtocolRegistrar.register()
 
     val sharedViewModel = getKoin().get<SharedViewModel>()

@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.screen.other
+package com.maxrave.windmusic.ui.screen.other
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.Crossfade
@@ -53,7 +53,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.asImageBitmap
-import com.maxrave.simpmusic.expect.ui.toImageBitmap
+import com.maxrave.windmusic.expect.ui.toImageBitmap
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.unit.Dp
@@ -70,35 +70,35 @@ import com.kmpalette.rememberPaletteState
 import com.maxrave.domain.data.model.browse.album.Track
 import com.maxrave.domain.utils.toSongEntity
 import com.maxrave.domain.utils.toTrack
-import com.maxrave.simpmusic.extension.angledGradientBackground
-import com.maxrave.simpmusic.extension.getColorFromPalette
-import com.maxrave.simpmusic.ui.component.CenterLoadingBox
-import com.maxrave.simpmusic.ui.component.DescriptionView
-import com.maxrave.simpmusic.ui.component.EndOfPage
-import com.maxrave.simpmusic.ui.component.HeartCheckBox
-import com.maxrave.simpmusic.ui.component.NowPlayingBottomSheet
-import com.maxrave.simpmusic.ui.component.PodcastEpisodeFullWidthItem
-import com.maxrave.simpmusic.ui.component.RippleIconButton
-import com.maxrave.simpmusic.ui.navigation.destination.list.ArtistDestination
-import com.maxrave.simpmusic.ui.theme.md_theme_dark_background
-import com.maxrave.simpmusic.ui.theme.typo
-import com.maxrave.simpmusic.viewModel.PodcastUIEvent
-import com.maxrave.simpmusic.viewModel.PodcastUIState
-import com.maxrave.simpmusic.viewModel.PodcastViewModel
+import com.maxrave.windmusic.extension.angledGradientBackground
+import com.maxrave.windmusic.extension.getColorFromPalette
+import com.maxrave.windmusic.ui.component.CenterLoadingBox
+import com.maxrave.windmusic.ui.component.DescriptionView
+import com.maxrave.windmusic.ui.component.EndOfPage
+import com.maxrave.windmusic.ui.component.HeartCheckBox
+import com.maxrave.windmusic.ui.component.NowPlayingBottomSheet
+import com.maxrave.windmusic.ui.component.PodcastEpisodeFullWidthItem
+import com.maxrave.windmusic.ui.component.RippleIconButton
+import com.maxrave.windmusic.ui.navigation.destination.list.ArtistDestination
+import com.maxrave.windmusic.ui.theme.md_theme_dark_background
+import com.maxrave.windmusic.ui.theme.typo
+import com.maxrave.windmusic.viewModel.PodcastUIEvent
+import com.maxrave.windmusic.viewModel.PodcastUIState
+import com.maxrave.windmusic.viewModel.PodcastViewModel
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.distinctUntilChanged
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.album_length
-import simpmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
-import simpmusic.composeapp.generated.resources.baseline_play_circle_24
-import simpmusic.composeapp.generated.resources.baseline_share_24
-import simpmusic.composeapp.generated.resources.baseline_shuffle_24
-import simpmusic.composeapp.generated.resources.holder
-import simpmusic.composeapp.generated.resources.no_description
-import simpmusic.composeapp.generated.resources.podcasts
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.album_length
+import windmusic.composeapp.generated.resources.baseline_arrow_back_ios_new_24
+import windmusic.composeapp.generated.resources.baseline_play_circle_24
+import windmusic.composeapp.generated.resources.baseline_share_24
+import windmusic.composeapp.generated.resources.baseline_shuffle_24
+import windmusic.composeapp.generated.resources.holder
+import windmusic.composeapp.generated.resources.no_description
+import windmusic.composeapp.generated.resources.podcasts
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

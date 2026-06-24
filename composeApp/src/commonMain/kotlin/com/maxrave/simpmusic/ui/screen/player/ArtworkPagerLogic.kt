@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.ui.screen.player
+package com.maxrave.windmusic.ui.screen.player
 
 import com.maxrave.domain.data.model.browse.album.Track
 

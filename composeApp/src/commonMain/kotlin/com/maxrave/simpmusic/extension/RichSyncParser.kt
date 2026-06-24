@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.extension
+package com.maxrave.windmusic.extension
 
 import com.maxrave.domain.extension.decodeHtmlEntities
 

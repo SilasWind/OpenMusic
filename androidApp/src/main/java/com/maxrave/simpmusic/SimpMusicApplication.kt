@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic
+package com.maxrave.windmusic
 
 import android.annotation.SuppressLint
 import android.app.Application
@@ -18,8 +18,8 @@ import coil3.request.crossfade
 import com.maxrave.data.di.loader.loadAllModules
 import com.maxrave.domain.manager.DataStoreManager
 import com.maxrave.logger.Logger
-import com.maxrave.simpmusic.di.viewModelModule
-import com.maxrave.simpmusic.service.backup.AutoBackupScheduler
+import com.maxrave.windmusic.di.viewModelModule
+import com.maxrave.windmusic.service.backup.AutoBackupScheduler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

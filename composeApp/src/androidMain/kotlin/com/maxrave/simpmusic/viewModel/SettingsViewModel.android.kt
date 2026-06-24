@@ -1,4 +1,4 @@
-package com.maxrave.simpmusic.viewModel
+package com.maxrave.windmusic.viewModel
 
 import android.app.usage.StorageStatsManager
 import android.content.Context
@@ -20,10 +20,10 @@ import com.maxrave.domain.repository.CacheRepository
 import com.maxrave.domain.repository.CommonRepository
 import com.maxrave.logger.Logger
 import com.maxrave.media3.di.stopService
-import com.maxrave.simpmusic.extension.bytesToMB
-import com.maxrave.simpmusic.extension.getSizeOfFile
-import com.maxrave.simpmusic.extension.zipInputStream
-import com.maxrave.simpmusic.extension.zipOutputStream
+import com.maxrave.windmusic.extension.bytesToMB
+import com.maxrave.windmusic.extension.getSizeOfFile
+import com.maxrave.windmusic.extension.zipInputStream
+import com.maxrave.windmusic.extension.zipOutputStream
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
@@ -31,8 +31,8 @@ import multiplatform.network.cmptoast.ToastGravity
 import multiplatform.network.cmptoast.showToast
 import org.jetbrains.compose.resources.getString
 import org.koin.mp.KoinPlatform.getKoin
-import simpmusic.composeapp.generated.resources.Res
-import simpmusic.composeapp.generated.resources.restore_success
+import windmusic.composeapp.generated.resources.Res
+import windmusic.composeapp.generated.resources.restore_success
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
