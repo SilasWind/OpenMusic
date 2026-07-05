@@ -63,6 +63,29 @@ enum class SearchType {
     PODCASTS,
 }
 
+fun prioritizeSuggestionItems(items: List<SearchResultType>): List<SearchResultType> =
+    items
+        .mapIndexed { index, item -> item to index }
+        .sortedWith(
+            compareByDescending<Pair<SearchResultType, Int>> { item ->
+                val suggestion = item.first
+                when (suggestion) {
+                    is PlaylistsResult -> {
+                        val title = suggestion.title.lowercase()
+                        when {
+                            title.contains("supermix") -> 4
+                            title.contains("mix") -> 3
+                            else -> 2
+                        }
+                    }
+
+                    is AlbumsResult -> 1
+                    is ArtistsResult -> 1
+                    else -> 0
+                }
+            }.thenBy { it.second },
+        ).map { it.first }
+
 fun SearchType.toStringRes(): StringResource =
     when (this) {
         SearchType.ALL -> Res.string.all
@@ -299,7 +322,7 @@ class SearchViewModel(
                             _searchScreenState.update { state ->
                                 state.copy(
                                     suggestQueries = suggestData.queries,
-                                    suggestYTItems = suggestData.recommendedItems,
+                                    suggestYTItems = prioritizeSuggestionItems(suggestData.recommendedItems),
                                 )
                             }
                         }
