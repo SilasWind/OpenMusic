@@ -114,6 +114,7 @@ import windmusic.composeapp.generated.resources.artists
 import windmusic.composeapp.generated.resources.baseline_arrow_outward_24
 import windmusic.composeapp.generated.resources.baseline_close_24
 import windmusic.composeapp.generated.resources.baseline_history_24
+import windmusic.composeapp.generated.resources.baseline_more_vert_24
 import windmusic.composeapp.generated.resources.baseline_search_24
 import windmusic.composeapp.generated.resources.clear_search_history
 import windmusic.composeapp.generated.resources.error_occurred
@@ -384,6 +385,7 @@ fun SearchScreen(
                                         }
                                     }
                                 },
+                                onMoreClick = onMoreClick,
                             )
                         }
                         items(searchScreenState.suggestQueries) { suggestion ->
@@ -855,6 +857,7 @@ fun SearchScreen(
 fun SuggestItemRow(
     searchResult: SearchResultType,
     onItemClick: (SearchResultType) -> Unit,
+    onMoreClick: ((SongEntity) -> Unit)? = null,
 ) {
     Row(
         modifier =
@@ -978,6 +981,26 @@ fun SuggestItemRow(
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis,
+                )
+            }
+        }
+
+        val songForActions =
+            when (searchResult) {
+                is SongsResult -> searchResult.toTrack().toSongEntity()
+                is VideosResult -> searchResult.toTrack().toSongEntity()
+                else -> null
+            }
+
+        if (songForActions != null && onMoreClick != null) {
+            Spacer(modifier = Modifier.width(8.dp))
+            IconButton(
+                onClick = { onMoreClick(songForActions) },
+                modifier = Modifier.size(36.dp),
+            ) {
+                Icon(
+                    painter = painterResource(Res.drawable.baseline_more_vert_24),
+                    contentDescription = "More options",
                 )
             }
         }
